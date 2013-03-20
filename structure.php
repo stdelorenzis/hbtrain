@@ -33,4 +33,9 @@ function get_footer()
 	
 
 }
+
+function cancel()
+{
+	header("Location: index.php");
+}
 ?>
