@@ -1,10 +1,20 @@
+body
+{
+	background-color: #F0F8FF !important;
+}
+
 .footer
 {
 	text-align: center;
 	background: #F0F8FF;
+	margin-top: 90%;
 }
 	
 .v-background
 {
 	background: #F0F8FF;
+}
+.s-container
+{
+	padding-bottom: 5%;
 }
