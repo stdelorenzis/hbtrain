@@ -16,10 +16,10 @@
    		</div>
 		<div class="row-fluid menuButtons">
 			<div class="span12">
-				<a class="btn btn-block btn-large" href="details.php">Details</a>
-				<a class="btn btn-success btn-block btn-large" href="newMembers.php">New Member</a>
-				<a class="btn btn-block btn-large" href="viewMembers.php">Registered Members</a>
-				<a class="btn btn-warning btn-block btn-large" href="trackMember.php">Track Members</a>
+				<a class="btn btn-block btn-large" href="details.php"><i class="icon-th"></i>&nbsp&nbspDetails</a>
+				<a class="btn btn-success btn-block btn-large" href="newMembers.php"><i class="icon-user icon-white"></i>&nbsp&nbspNew Member</a>
+				<a class="btn btn-block btn-large" href="viewMembers.php"><i class="icon-search"></i>&nbsp&nbspRegistered Members</a>
+				<a class="btn btn-warning btn-block btn-large" href="trackMember.php"><i class="icon-tag icon-white"></i>&nbsp&nbspTrack Members</a>
 			</div>
 		</div>
 	</div>
