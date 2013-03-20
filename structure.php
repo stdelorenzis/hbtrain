@@ -9,8 +9,9 @@ function get_header()
 				<title>Heartbeat Training</title>                                      
 				<meta name=\"viewport\" content=\"width=device-width', initial-scale=1.0\"> 
 				<!--bootstrap-->                                                      
-				<link href=\"bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\" media=\"screen\">    
-				<link href=\"bootstrap/css/bootstrap-responsive.min.css\" rel=\"stylesheet\">                   
+				<link href=\"css/bootstrap.min.css\" rel=\"stylesheet\" media=\"screen\">    
+				<link href=\"css/bootstrap-responsive.min.css\" rel=\"stylesheet\">    
+				<link hred=\"css/style.css\" rel=\"stylesheet\" media=\"screen\">
 			</head>                                                                    
 		<body> ";   
 	echo $headerHtml;
@@ -20,6 +21,11 @@ function get_header()
 function get_footer()
 {
 	$footerHtml = "
+			<div class=\"row\">
+				<div class=\"span12\">
+					Helping Steph learn programming since 2012
+				</div>
+			<div>
 		</body>
 	</html>";
 	
