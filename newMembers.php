@@ -18,7 +18,7 @@
 		<div class="row-fluid">
 			<div class="span3"></div>
 			<div class="span6">
-				<form class="form-horizontal">
+				<form class="form-horizontal" action="createNewMember.php">
 					<div class="control-group">
 						<label class="control-label" for="inputFname">First Name</label>
 						<div class="controls">
@@ -32,7 +32,7 @@
 							</p>
 							</p>
 							<button type="submit" class="btn btn-success">Sign Up</button>
-							<button class="btn btn-danger" onclick="cancel()">Cancel</button>
+							<a class="btn btn-danger" href="index.php">Cancel</a>
 						</div>
 					</div>
 				</form>
