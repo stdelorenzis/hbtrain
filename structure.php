@@ -14,7 +14,7 @@
 					<link href=\"css/style.css\" rel=\"stylesheet\" media=\"screen\">             
 				</head>                                                                    
 				<body> ";   
-		return $headerHtml;
+		echo $headerHtml;
 			
 	}
 	
@@ -24,7 +24,7 @@
 			</body>
 		</html>";
 		
-		return $footerHtml;
+		echo $footerHtml;
 		
 
 	}
