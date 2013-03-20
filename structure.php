@@ -21,11 +21,11 @@ function get_header()
 function get_footer()
 {
 	$footerHtml = "
-			<div class=\"row footer\">
+			<div class=\"row-fluid footer\">
 				<div class=\"span12\">
 					Helping Steph learn programming since 2012
 				</div>
-			<div>
+			</div>
 		</body>
 	</html>";
 	
