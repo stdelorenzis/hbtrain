@@ -1,13 +1,15 @@
 body
 {
 	background-color: #F0F8FF !important;
+	
 }
+
 
 .footer
 {
 	text-align: center;
 	background: #F0F8FF;
-	margin-top: 90%;
+	top: 90%;
 }
 	
 .v-background
@@ -17,4 +19,22 @@ body
 .s-container
 {
 	padding-bottom: 5%;
+}
+
+.menuButtons
+{
+	margin-top: 5%;
+}
+
+.heart
+{
+	margin-top: 2%;
+	width: 20%;
+	float: right;
+	background-color: transparent;
+}
+
+.headerText
+{
+	margin-top: 2%;
 }
