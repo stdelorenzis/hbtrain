@@ -10,8 +10,7 @@ function get_header()
 				<meta name=\"viewport\" content=\"width=device-width', initial-scale=1.0\"> 
 				<!--bootstrap-->                                                      
 				<link href=\"bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\" media=\"screen\">    
-				<link href=\"bootstrap/css/bootstrap-responsive.min.css\" rel=\"stylesheet\">         
-				<link href=\"bootstrap/css/style.css\" rel=\"stylesheet\" media=\"screen\">             
+				<link href=\"bootstrap/css/bootstrap-responsive.min.css\" rel=\"stylesheet\">                   
 			</head>                                                                    
 		<body> ";   
 	echo $headerHtml;
