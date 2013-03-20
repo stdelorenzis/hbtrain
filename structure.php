@@ -11,7 +11,7 @@ function get_header()
 				<!--bootstrap-->                                                      
 				<link href=\"css/bootstrap.min.css\" rel=\"stylesheet\" media=\"screen\">    
 				<link href=\"css/bootstrap-responsive.min.css\" rel=\"stylesheet\">    
-				<link hred=\"css/style.css\" rel=\"stylesheet\" media=\"screen\">
+				<link href=\"css/style.css\" rel=\"stylesheet\" media=\"screen\">
 			</head>                                                                    
 		<body> ";   
 	echo $headerHtml;
