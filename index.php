@@ -20,6 +20,7 @@
 				<a class="btn btn-block btn-large" href="details.php"><i class="icon-th"></i>&nbsp&nbspDetails</a>
 				<a class="btn btn-success btn-block btn-large" href="newMembers.php"><i class="icon-user icon-white"></i>&nbsp&nbspNew Member</a>
 				<a class="btn btn-block btn-large" href="viewMembers.php"><i class="icon-search"></i>&nbsp&nbspRegistered Members</a>
+				<a class="btn btn-block btn-large" href="index.php"><i class="icon-shopping-cart"></i>&nbsp&nbspPayment Options</a>
 				<a class="btn btn-warning btn-block btn-large" href="trackMember.php"><i class="icon-tag icon-white"></i>&nbsp&nbspTrack Members</a>
 			</div>
 			<div class="span3"></div>
