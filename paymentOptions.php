@@ -47,7 +47,7 @@
 			?>
 				</table>
 				<div class="span9"></div>
-				<button class="btn btn-success positionRight" type="submit"> Submit </button>
+				<button class="btn btn-success pull-right" type="submit"> Submit </button>
 			</form>
 			</div>
 			<div class="span3"></div>
