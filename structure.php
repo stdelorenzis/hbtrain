@@ -15,6 +15,7 @@ function get_header()
 			</head>                                                                    
 		<body> 
 			<script src=\"http://code.jquery.com/jquery-latest.js\"></script>
+			<script src=\"js/bootstrap.js\"></script>
 			<script src=\"js/bootstrap.min.js\"></script> ";   
 	echo $headerHtml;
 		
