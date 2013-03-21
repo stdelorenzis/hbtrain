@@ -6,28 +6,25 @@
 	
 	get_header();
 	
-	$sql = "SELECT * FROM members";
+	//$sql = "SELECT * FROM members WHERE paid = 0";
+	//$res = mysql_query($sql);
+	
+	//$paid = mysql_fetch_array($res);
+	//$amount = count($res);
+	//echo $paid;
+	//echo $amount;
+	
+	$sql = "SELECT * FROM members WHERE paid = 0";
 	$res = mysql_query($sql);
 	
-	$paid = mysql_fetch_array($res);
-	if (in_array(0,$paid))
-	{
-		$amount = count(in_array(0,$paid));
-		$needToPay = TRUE;
-		echo "Need to pay";
-		echo $amount;
-	}
-	else
-	{
-		$needToPay = FALSE;
-	}
-	
+	$count = mysql_num_rows($res);
+	if ($count == 0)
+		{
+			$count = "";
+		}
 ?>
 <script>
-	$(document).ready(function()
-	{
-		$("#registeredBtn").tooltip('show');
-	}
+
 </script>
 
 <!-- HTML CONTENT GOES HERE -->
@@ -42,7 +39,7 @@
 			<div class="span6">
 				<a class="btn btn-block btn-large" href="details.php"><i class="icon-th"></i>&nbsp&nbspDetails</a>
 				<a class="btn btn-success btn-block btn-large" href="newMembers.php"><i class="icon-user icon-white"></i>&nbsp&nbspNew Member</a>
-				<a class="btn btn-block btn-large" href="viewMembers.php" id="registeredBtn"><i class="icon-search"></i>&nbsp&nbspRegistered Members</a>
+				<a class="btn btn-block btn-large" href="viewMembers.php"><span data-toggle="tooltip" title="New members need to pay" class="badge badge-important"><?php echo $count?></span>&nbsp&nbsp<i class="icon-search"></i>&nbsp&nbspRegistered Members</a>
 				<a class="btn btn-block btn-large" href="index.php"><i class="icon-shopping-cart"></i>&nbsp&nbspPayment Options</a>
 				<a class="btn btn-warning btn-block btn-large" href="trackMember.php"><i class="icon-tag icon-white"></i>&nbsp&nbspTrack Members</a>
 			</div>
