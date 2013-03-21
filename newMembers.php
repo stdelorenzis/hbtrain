@@ -18,17 +18,17 @@
 		<div class="row-fluid">
 			<div class="span3"></div>
 			<div class="span6">
-				<form class="form-horizontal" action="createNewMember.php">
+				<form class="form-horizontal" action="createNewMember.php" method="post">
 					<div class="control-group">
 						<label class="control-label" for="inputFname">First Name</label>
 						<div class="controls">
-							<input class="input-xlarge" type="text" id="inputFname" placeholder="First Name">
+							<input class="input-xlarge" type="text" name="fname" id="inputFname" placeholder="First Name">
 						</div>
 					</div>
 					<div class="control-group">
 						<label class="control-label" for="inputLname">Last Name</label>
 						<div class="controls">
-							<input class="input-xlarge" type="text" id="inputLname" placeholder="Last Name">
+							<input class="input-xlarge" type="text" name="lname" id="inputLname" placeholder="Last Name">
 							</p>
 							</p>
 							<button type="submit" class="btn btn-success">Sign Up</button>
