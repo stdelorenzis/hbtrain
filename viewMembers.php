@@ -54,6 +54,7 @@ var xmlhttp;
 			<div class="span3"></div>
 		</div>
 		</p>
+		<!--Nav buttons-->
 		<div class="row-fluid">
 			<div class="span3"></div>
 			<div class="span6">

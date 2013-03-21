@@ -1,6 +1,6 @@
 body
 {
-	background-color: #F0F8FF !important;
+	background-color: #F0F8FF !important; /*overrides bootstrap*/
 	
 }
 
@@ -21,11 +21,13 @@ body
 	padding-bottom: 5%;
 }
 
+/*home page*/
 .menuButtons
 {
 	margin-top: 5%;
 }
 
+/*heart in Title header*/
 .heart
 {
 	margin-top: 2%;
