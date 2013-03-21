@@ -18,9 +18,41 @@
 			<div class="span3"></div>
 			<div class="span6">
 			<!--table -->
+			<form action="addPaid.php" method="post">
+				<table class="table table-bordered">
+					<tr>
+						<td>First Name</td>
+						<td>Last Name</td>
+						<td class="text-center">Paid?</td>
+					</tr>
+			<?php
+				$sql = "SELECT * FROM members WHERE paid = 0";
+				$res = mysql_query($sql);
+				
+				while ($row = mysql_fetch_array($res))
+				{
+					$fname = $row['first_name'];
+					$lname = $row['last_name'];
+					$id = $row['id'];
+				
+					print ("
+				
+							<tr>
+								<td>$fname</td>
+								<td>$lname</td>
+								<td><input name=\"newPaid[]\" type=\"checkbox\" value=\"$id\"></td>
+							</tr>");
+				}
+				
+			?>
+				</table>
+				<div class="span9"></div>
+				<button class="btn btn-success positionRight" type="submit"> Submit </button>
+			</form>
 			</div>
 			<div class="span3"></div>
 		</div>
+		</p>
 		<div class="row-fluid">
 			<div class="span3"></div>
 			<div class="span6">
