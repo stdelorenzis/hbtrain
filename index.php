@@ -42,6 +42,7 @@
 				<a class="btn btn-block btn-large" href="viewMembers.php"><span data-toggle="tooltip" title="New members need to pay" class="badge badge-important"><?php echo $count?></span>&nbsp&nbsp<i class="icon-search"></i>&nbsp&nbspRegistered Members</a>
 				<a class="btn btn-block btn-large" href="paymentOptions.php"><i class="icon-shopping-cart"></i>&nbsp&nbspPayment Options</a>
 				<a class="btn btn-warning btn-block btn-large" href="trackMember.php"><i class="icon-tag icon-white"></i>&nbsp&nbspTrack Members</a>
+				<a class="btn btn-block btn-large" href="ohsChecklist.php"><i class="icon-tick"></i>&nbsp&nbspOHS Checklist</a>
 			</div>
 			<div class="span3"></div>
 		</div>
