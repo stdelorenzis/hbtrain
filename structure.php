@@ -13,7 +13,9 @@ function get_header()
 				<link href=\"css/bootstrap-responsive.min.css\" rel=\"stylesheet\">    
 				<link href=\"css/style.css\" rel=\"stylesheet\" media=\"screen\">
 			</head>                                                                    
-		<body> ";   
+		<body> 
+			<script src=\"http://code.jquery.com/jquery-latest.js\"></script>
+			<script src=\"js/bootstrap.min.js\"></script> ";   
 	echo $headerHtml;
 		
 }
