@@ -4,16 +4,16 @@
 	get_header();
 	
 	$sql = "SELECT * FROM members
-			ORDER BY first_name";
+			ORDER BY paid, first_name";
 	$res = mysql_query($sql);
 
 
-	print ("<table class=\"table table-striped\" id=\"memberTable\">
+	echo "<table class=\"table table-striped table-bordered\" id=\"memberTable\">
 			<tr>
 				<th>First Name</th>
 				<th>Last Name</th>
 				<th>Paid</th>
-			</tr>");
+			</tr>";
 			
 	while ($row = mysql_fetch_array($res))
 		{
@@ -23,16 +23,21 @@
 			if ($row['paid'] == 0)
 				{
 					$paid = "Nope :( ";
+					$rowclass = "error";
+					$textclass = "text-error";
 				}
 				else
 				{
 					$paid = "Yes :)";
+					$rowclass = "success";
+					$textclass = "text-success";
 				}
 	
-	print ("<tr>
+			
+	print ("<tr class=\"$rowclass\">
 				<td>$fname</td>
 				<td>$lname</td>
-				<td>$paid</td>
+				<td><span class=\"$textclass\"><strong>$paid</strong></span></td>
 			</tr>");
 		}
 	echo "</table>";
