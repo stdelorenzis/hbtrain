@@ -3,9 +3,13 @@
 	require 'structure.php';
 	
 	get_header();
+	
+?>
+<script>
+<?php
 	get_ohsScript();
 ?>
-
+</script>
 	<div class="container-fluid v-background s-container">
   		<div class="row-fluid header">
 			<div class="span4"><img class="heart" src="img/heartgif.gif"/></div>
@@ -18,7 +22,7 @@
 			<div class="span3"></div>
 			<div class="span6">
 				<!--Button to trigger Modal-->
-				<a href="#ohsChecklist" role="button" class="btn btn-block btn-large btn-success" data-toggle="modal">Complete Daily Checklist</a>
+				<a id="ohsModal" role="button" class="btn btn-block btn-large btn-success">Complete Daily Checklist</a>
 			</div>
 			<div class="span3"></div>
 		</div>
@@ -52,21 +56,18 @@
 		</div>
 	</div>
 	
-	<!--Modal
-		Why does it close automatically?-->
-	<div id="ohsChecklist" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="OHSChecklist" aria-hidden="true">
+	 <div id="ohsChecklist" class="modal hide fade">
 		<div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-			<h3 id="myModalLabel">OHS Checklist"</h3>
-		</div>
+			<button type="button" class="close ohsModalClose" data-dismiss="modal" aria-hidden="true">x</button>
+			<h3 id="myModalLabel">OHS Checklist</h3>
+			</div>
 		<div class="modal-body">
 			<div id="question">
 				<!--OHS questions-->
 			</div>
 		</div>
 		<div class="modal-footer">
-			<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-			<button class="btn btn-primary">Save Changes</button>
+			<button class="btn btn-danger ohsModalClose" data-dismiss="modal" aria-hidden="true">Close</button>
 		</div>
 	</div>
 	
