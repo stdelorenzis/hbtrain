@@ -39,18 +39,18 @@ function get_footer()
 
 function get_ohsScript()
 {
-	$OHSscript = '<script>
-	$(document).ready(function(){
+	$OHSscript = '
+			$("#ohsModal").click(function(){
+			$("#ohsChecklist").modal();
+				
+		});
 		
 		//question 1
 		var question1 = "<div class=\"show\" id=\"question1\">\n"
 						+		"<div class=\"progress\">\n"
 						+			"<div class=\"bar bar-success\" style=\"width: 1%\"></div>\n"
 						+		"</div>\n"
-						+	 	"<div id=\"QuestionNavButtons\" class=\"pull-right\">\n"
-						+	 		"<a id=\"btnQ1\" class=\"btn btn-primary\">next</a>\n"
-						+			"<a id=\"btnClose\" class=\"btn btn-danger\">Close<\a>\n"
-						+		"</div>\n"
+						+	 	"<a id=\"btnQ1\" class=\"btn btn-primary pull-right\">Next</a>\n"
 						+	"</div>";
 			
 			
@@ -60,10 +60,7 @@ function get_ohsScript()
 						+			"<div class=\"bar bar-success\" style=\"width: 8.3%\"></div>\n"
 						+ 	 	"</div>\n"
 						+ 		"<a id=\"btnPrev2\" class=\"btn btn-primary pull-left\">Previous</a>\n"
-						+	 	"<div id=\"QuestionNavButtons\" class=\"pull-right\">\n"
-						+	 		"<a id=\"btnQ2\" class=\"btn btn-primary\">next</a>\n"
-						+			"<a id=\"btnClose\" class=\"btn btn-danger\">Close<\a>\n"
-						+		"</div>\n"
+						+	 	"<a id=\"btnQ2\" class=\"btn btn-primary pull-right\">Next</a>\n"
 						+	"</div>\n";
 		
 		//question 3	
@@ -72,10 +69,7 @@ function get_ohsScript()
 						+			"<div class=\"bar bar-success\" style=\"width: 16.6%\"></div>\n"
 						+ 	 	"</div>\n"
 						+ 		"<a id=\"btnPrev3\" class=\"btn btn-primary pull-left\">Previous</a>\n"
-						+	 	"<div id=\"QuestionNavButtons\" class=\"pull-right\">\n"
-						+	 		"<a id=\"btnQ3\" class=\"btn btn-primary\">next</a>\n"
-						+			"<a id=\"btnClose\" class=\"btn btn-danger\">Close<\a>\n"
-						+		"</div>\n"
+						+	 	"<a id=\"btnQ3\" class=\"btn btn-primary pull-right\">Next</a>\n"
 						+	"</div>\n";
 		
 		//question 4
@@ -84,10 +78,7 @@ function get_ohsScript()
 						+			"<div class=\"bar bar-success\" style=\"width: 25%\"></div>\n"
 						+ 	 	"</div>\n"
 						+ 		"<a id=\"btnPrev4\" class=\"btn btn-primary pull-left\">Previous</a>\n"
-						+	 	"<div id=\"QuestionNavButtons\" class=\"pull-right\">\n"
-						+	 		"<a id=\"btnQ4\" class=\"btn btn-primary\">next</a>\n"
-						+			"<a id=\"btnClose\" class=\"btn btn-danger\">Close<\a>\n"
-						+		"</div>\n"
+						+	 	"<a id=\"btnQ4\" class=\"btn btn-primary pull-right\">Next</a>\n"
 						+	"</div>\n";
 
 		//question 5
@@ -96,10 +87,7 @@ function get_ohsScript()
 						+			"<div class=\"bar bar-success\" style=\"width: 33.3%\"></div>\n"
 						+ 	 	"</div>\n"
 						+ 		"<a id=\"btnPrev5\" class=\"btn btn-primary pull-left\">Previous</a>\n"
-						+	 	"<div id=\"QuestionNavButtons\" class=\"pull-right\">\n"
-						+	 		"<a id=\"btnQ5\" class=\"btn btn-primary\">next</a>\n"
-						+			"<a id=\"btnClose\" class=\"btn btn-danger\">Close<\a>\n"
-						+		"</div>\n"
+						+	 	"<a id=\"btnQ5\" class=\"btn btn-primary pull-right\">Next</a>\n"
 						+	"</div>\n";
 						
 		//question 6
@@ -108,10 +96,7 @@ function get_ohsScript()
 						+			"<div class=\"bar bar-success\" style=\"width: 41.6%\"></div>\n"
 						+ 	 	"</div>\n"
 						+ 		"<a id=\"btnPrev6\" class=\"btn btn-primary pull-left\">Previous</a>\n"
-						+	 	"<div id=\"QuestionNavButtons\" class=\"pull-right\">\n"
-						+	 		"<a id=\"btnQ6\" class=\"btn btn-primary\">next</a>\n"
-						+			"<a id=\"btnClose\" class=\"btn btn-danger\">Close<\a>\n"
-						+		"</div>\n"
+						+	 	"<a id=\"btnQ6\" class=\"btn btn-primary pull-right\">Next</a>\n"
 						+	"</div>\n";
 		
 		//question 7
@@ -120,10 +105,7 @@ function get_ohsScript()
 						+			"<div class=\"bar bar-success\" style=\"width: 50%\"></div>\n"
 						+ 	 	"</div>\n"
 						+ 		"<a id=\"btnPrev7\" class=\"btn btn-primary pull-left\">Previous</a>\n"
-						+	 	"<div id=\"QuestionNavButtons\" class=\"pull-right\">\n"
-						+	 		"<a id=\"btnQ7\" class=\"btn btn-primary\">Next</a>\n"
-						+			"<a id=\"btnClose\" class=\"btn btn-danger\">Close<\a>\n"
-						+		"</div>\n"
+						+	 	"<a id=\"btnQ7\" class=\"btn btn-primary pull-right\">Next</a>\n"
 						+	"</div>\n";
 		
 		//question 8
@@ -132,10 +114,7 @@ function get_ohsScript()
 						+			"<div class=\"bar bar-success\" style=\"width: 58.3%\"></div>\n"
 						+ 	 	"</div>\n"
 						+ 		"<a id=\"btnPrev8\" class=\"btn btn-primary pull-left\">Previous</a>\n"
-						+	 	"<div id=\"QuestionNavButtons\" class=\"pull-right\">\n"
-						+	 		"<a id=\"btnQ8\" class=\"btn btn-primary\">Next</a>\n"
-						+			"<a id=\"btnClose\" class=\"btn btn-danger\">Close<\a>\n"
-						+		"</div>\n"
+						+	 	"<a id=\"btnQ8\" class=\"btn btn-primary pull-right\">Next</a>\n"
 						+	"</div>\n";
 		
 		//question 9
@@ -144,10 +123,7 @@ function get_ohsScript()
 						+			"<div class=\"bar bar-success\" style=\"width: 66.6%\"></div>\n"
 						+ 	 	"</div>\n"
 						+ 		"<a id=\"btnPrev9\" class=\"btn btn-primary pull-left\">Previous</a>\n"
-						+	 	"<div id=\"QuestionNavButtons\" class=\"pull-right\">\n"
-						+	 		"<a id=\"btnQ9\" class=\"btn btn-primary\">Next</a>\n"
-						+			"<a id=\"btnClose\" class=\"btn btn-danger\">Close<\a>\n"
-						+		"</div>\n"
+						+	 	"<a id=\"btnQ9\" class=\"btn btn-primary pull-right\">Next</a>\n"
 						+	"</div>\n";
 						
 		//question 10
@@ -156,10 +132,7 @@ function get_ohsScript()
 						+			"<div class=\"bar bar-success\" style=\"width: 74.8%\"></div>\n"
 						+ 	 	"</div>\n"
 						+ 		"<a id=\"btnPrev10\" class=\"btn btn-primary pull-left\">Previous</a>\n"
-						+	 	"<div id=\"QuestionNavButtons\" class=\"pull-right\">\n"
-						+	 		"<a id=\"btnQ10\" class=\"btn btn-primary\">Next</a>\n"
-						+			"<a id=\"btnClose\" class=\"btn btn-danger\">Close<\a>\n"
-						+		"</div>\n"
+						+	 	"<a id=\"btnQ10\" class=\"btn btn-primary pull-right\">Next</a>\n"
 						+	"</div>\n";
 						
 		//question 11
@@ -168,10 +141,7 @@ function get_ohsScript()
 						+			"<div class=\"bar bar-success\" style=\"width: 83.3%\"></div>\n"
 						+ 	 	"</div>\n"
 						+ 		"<a id=\"btnPrev11\" class=\"btn btn-primary pull-left\">Previous</a>\n"
-						+	 	"<div id=\"QuestionNavButtons\" class=\"pull-right\">\n"
-						+	 		"<a id=\"btnQ11\" class=\"btn btn-primary\">next</a>\n"
-						+			"<a id=\"btnClose\" class=\"btn btn-danger\">Close<\a>\n"
-						+		"</div>\n"
+						+	 	"<a id=\"btnQ11\" class=\"btn btn-primary pull-right\">Next</a>\n"
 						+	"</div>\n";
 		
 		//question 12
@@ -180,10 +150,7 @@ function get_ohsScript()
 						+			"<div class=\"bar bar-success\" style=\"width: 91.4%\"></div>\n"
 						+ 	 	"</div>\n"
 						+ 		"<a id=\"btnPrev12\" class=\"btn btn-primary pull-left\">Previous</a>\n"
-						+	 	"<div id=\"QuestionNavButtons\" class=\"pull-right\">\n"
-						+	 		"<a id=\"btnQ12\" class=\"btn btn-primary\">next</a>\n"
-						+			"<a id=\"btnClose\" class=\"btn btn-danger\">Close<\a>\n"
-						+		"</div>\n"
+						+	 	"<a id=\"btnQ12\" class=\"btn btn-primary pull-right\">Next</a>\n"
 						+	"</div>\n";
 		//question 13
 		var question13 =	"<div class=\"hide\" id=\"question13\">\n"
@@ -191,10 +158,7 @@ function get_ohsScript()
 						+			"<div class=\"bar bar-success\" style=\"width: 100%\"></div>\n"
 						+ 	 	"</div>\n"
 						+ 		"<a id=\"btnPrev13\" class=\"btn btn-primary pull-left\">Previous</a>\n"
-						+		"<div id=\"QuestionNavButtons\" class=\"pull-right\">\n"
-						+	 		"<a id=\"btnQ13\" class=\"btn btn-success\">Save</a>\n"
-						+			"<a id=\"btnClose\" class=\"btn btn-danger\">Close<\a>\n"
-						+		"</div>\n"
+						+	 	"<a id=\"btnQ13\" class=\"btn btn-success pull-right\">Save</a>\n"
 						+	"</div>\n";
 		
 		//onload
@@ -279,7 +243,8 @@ function get_ohsScript()
 		});
 		
 		//previous buttons
-		$("btnPrev2").click(function(){
+		
+		$("#btnPrev2").click(function(){
 			
 			$("#question2").hide();
 			$("#question1").show();
@@ -354,12 +319,22 @@ function get_ohsScript()
 			
 			$("#question13").hide();
 			$("#question12").show();
-		});
-		
-	});
-	</script>';
+		});';
 	
 
 	echo $OHSscript;
+}
+
+function close_ohsModal()
+{
+	$close_ohsModal = '
+	
+		$(".ohsModalClose").click(function(){
+			confirm("Are you sure you want to close? All progress will be lost.");
+			$("#ohsChecklist").modal("hide");
+		});';
+	
+		
+	echo $close_ohsModal;
 }
 ?>
