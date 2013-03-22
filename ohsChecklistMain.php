@@ -6,9 +6,12 @@
 	
 ?>
 <script>
+$(document).ready(function(){
 <?php
 	get_ohsScript();
+	close_ohsModal();
 ?>
+});
 </script>
 	<div class="container-fluid v-background s-container">
   		<div class="row-fluid header">
@@ -56,9 +59,10 @@
 		</div>
 	</div>
 	
+	<!--modal popup box-->
 	 <div id="ohsChecklist" class="modal hide fade">
 		<div class="modal-header">
-			<button type="button" class="close ohsModalClose" data-dismiss="modal" aria-hidden="true">x</button>
+			<button type="button" class="close ohsModalClose" aria-hidden="true">x</button>
 			<h3 id="myModalLabel">OHS Checklist</h3>
 			</div>
 		<div class="modal-body">
@@ -67,9 +71,10 @@
 			</div>
 		</div>
 		<div class="modal-footer">
-			<button class="btn btn-danger ohsModalClose" data-dismiss="modal" aria-hidden="true">Close</button>
+			<button class="btn btn-danger ohsModalClose" aria-hidden="true">Close</button>
 		</div>
 	</div>
+	
 	
 	
 
