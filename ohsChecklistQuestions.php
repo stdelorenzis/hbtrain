@@ -9,19 +9,27 @@
 	$(document).ready(function(){
 		
 		//question 1
-		var question1 = "<div id=\"question1\">\n"
+		var question1 = "<div class=\"show\" id=\"question1\">\n"
 						+		"<div class=\"progress\">\n"
 						+			"<div class=\"bar bar-success\" style=\"width: 1%\"></div>\n"
 						+		"</div>\n"
-						+		"<a id=\"btnQ1\" class=\"btn btn-primary\">Next</a>\n"
-						+	"</div>"
-				
+						+	 	"<div id=\"QuestionNavButtons\" class=\"pull-right\">\n"
+						+	 		"<a id=\"btnQ1\" class=\"btn btn-primary\">next</a>\n"
+						+			"<a id=\"btnClose\" class=\"btn btn-danger\">Close<\a>\n"
+						+		"</div>\n"
+						+	"</div>";
+			
+			
 		//question 2
 		var question2 =  "<div class=\"hide\" id=\"question2\">\n"
 						+		"<div class=\"progress\">\n"
 						+			"<div class=\"bar bar-success\" style=\"width: 8.3%\"></div>\n"
 						+ 	 	"</div>\n"
-						+	 	"<a id=\"btnQ2\" class=\"btn btn-primary\">Next</a>\n"
+						+ 		"<a id=\"btnPrev2\" class=\"btn btn-primary pull-left\">Previous</a>\n"
+						+	 	"<div id=\"QuestionNavButtons\" class=\"pull-right\">\n"
+						+	 		"<a id=\"btnQ2\" class=\"btn btn-primary\">next</a>\n"
+						+			"<a id=\"btnClose\" class=\"btn btn-danger\">Close<\a>\n"
+						+		"</div>\n"
 						+	"</div>\n";
 		
 		//question 3	
@@ -29,7 +37,11 @@
 						+		"<div class=\"progress\">\n"
 						+			"<div class=\"bar bar-success\" style=\"width: 16.6%\"></div>\n"
 						+ 	 	"</div>\n"
-						+	 	"<a id=\"btnQ3\" class=\"btn btn-primary\">Next</a>\n"
+						+ 		"<a id=\"btnPrev3\" class=\"btn btn-primary pull-left\">Previous</a>\n"
+						+	 	"<div id=\"QuestionNavButtons\" class=\"pull-right\">\n"
+						+	 		"<a id=\"btnQ3\" class=\"btn btn-primary\">next</a>\n"
+						+			"<a id=\"btnClose\" class=\"btn btn-danger\">Close<\a>\n"
+						+		"</div>\n"
 						+	"</div>\n";
 		
 		//question 4
@@ -37,7 +49,11 @@
 						+		"<div class=\"progress\">\n"
 						+			"<div class=\"bar bar-success\" style=\"width: 25%\"></div>\n"
 						+ 	 	"</div>\n"
-						+	 	"<a id=\"btnQ4\" class=\"btn btn-primary\">Next</a>\n"
+						+ 		"<a id=\"btnPrev4\" class=\"btn btn-primary pull-left\">Previous</a>\n"
+						+	 	"<div id=\"QuestionNavButtons\" class=\"pull-right\">\n"
+						+	 		"<a id=\"btnQ4\" class=\"btn btn-primary\">next</a>\n"
+						+			"<a id=\"btnClose\" class=\"btn btn-danger\">Close<\a>\n"
+						+		"</div>\n"
 						+	"</div>\n";
 
 		//question 5
@@ -45,7 +61,11 @@
 						+		"<div class=\"progress\">\n"
 						+			"<div class=\"bar bar-success\" style=\"width: 33.3%\"></div>\n"
 						+ 	 	"</div>\n"
-						+	 	"<a id=\"btnQ5\" class=\"btn btn-primary\">Next</a>\n"
+						+ 		"<a id=\"btnPrev5\" class=\"btn btn-primary pull-left\">Previous</a>\n"
+						+	 	"<div id=\"QuestionNavButtons\" class=\"pull-right\">\n"
+						+	 		"<a id=\"btnQ5\" class=\"btn btn-primary\">next</a>\n"
+						+			"<a id=\"btnClose\" class=\"btn btn-danger\">Close<\a>\n"
+						+		"</div>\n"
 						+	"</div>\n";
 						
 		//question 6
@@ -53,7 +73,11 @@
 						+		"<div class=\"progress\">\n"
 						+			"<div class=\"bar bar-success\" style=\"width: 41.6%\"></div>\n"
 						+ 	 	"</div>\n"
-						+	 	"<a id=\"btnQ6\" class=\"btn btn-primary\">Next</a>\n"
+						+ 		"<a id=\"btnPrev6\" class=\"btn btn-primary pull-left\">Previous</a>\n"
+						+	 	"<div id=\"QuestionNavButtons\" class=\"pull-right\">\n"
+						+	 		"<a id=\"btnQ6\" class=\"btn btn-primary\">next</a>\n"
+						+			"<a id=\"btnClose\" class=\"btn btn-danger\">Close<\a>\n"
+						+		"</div>\n"
 						+	"</div>\n";
 		
 		//question 7
@@ -61,7 +85,11 @@
 						+		"<div class=\"progress\">\n"
 						+			"<div class=\"bar bar-success\" style=\"width: 50%\"></div>\n"
 						+ 	 	"</div>\n"
-						+	 	"<a id=\"btnQ7\" class=\"btn btn-primary\">Next</a>\n"
+						+ 		"<a id=\"btnPrev7\" class=\"btn btn-primary pull-left\">Previous</a>\n"
+						+	 	"<div id=\"QuestionNavButtons\" class=\"pull-right\">\n"
+						+	 		"<a id=\"btnQ7\" class=\"btn btn-primary\">Next</a>\n"
+						+			"<a id=\"btnClose\" class=\"btn btn-danger\">Close<\a>\n"
+						+		"</div>\n"
 						+	"</div>\n";
 		
 		//question 8
@@ -69,7 +97,11 @@
 						+		"<div class=\"progress\">\n"
 						+			"<div class=\"bar bar-success\" style=\"width: 58.3%\"></div>\n"
 						+ 	 	"</div>\n"
-						+	 	"<a id=\"btnQ8\" class=\"btn btn-primary\">Next</a>\n"
+						+ 		"<a id=\"btnPrev8\" class=\"btn btn-primary pull-left\">Previous</a>\n"
+						+	 	"<div id=\"QuestionNavButtons\" class=\"pull-right\">\n"
+						+	 		"<a id=\"btnQ8\" class=\"btn btn-primary\">Next</a>\n"
+						+			"<a id=\"btnClose\" class=\"btn btn-danger\">Close<\a>\n"
+						+		"</div>\n"
 						+	"</div>\n";
 		
 		//question 9
@@ -77,7 +109,11 @@
 						+		"<div class=\"progress\">\n"
 						+			"<div class=\"bar bar-success\" style=\"width: 66.6%\"></div>\n"
 						+ 	 	"</div>\n"
-						+	 	"<a id=\"btnQ9\" class=\"btn btn-primary\">Next</a>\n"
+						+ 		"<a id=\"btnPrev9\" class=\"btn btn-primary pull-left\">Previous</a>\n"
+						+	 	"<div id=\"QuestionNavButtons\" class=\"pull-right\">\n"
+						+	 		"<a id=\"btnQ9\" class=\"btn btn-primary\">Next</a>\n"
+						+			"<a id=\"btnClose\" class=\"btn btn-danger\">Close<\a>\n"
+						+		"</div>\n"
 						+	"</div>\n";
 						
 		//question 10
@@ -85,7 +121,11 @@
 						+		"<div class=\"progress\">\n"
 						+			"<div class=\"bar bar-success\" style=\"width: 74.8%\"></div>\n"
 						+ 	 	"</div>\n"
-						+	 	"<a id=\"btnQ10\" class=\"btn btn-primary\">Next</a>\n"
+						+ 		"<a id=\"btnPrev10\" class=\"btn btn-primary pull-left\">Previous</a>\n"
+						+	 	"<div id=\"QuestionNavButtons\" class=\"pull-right\">\n"
+						+	 		"<a id=\"btnQ10\" class=\"btn btn-primary\">Next</a>\n"
+						+			"<a id=\"btnClose\" class=\"btn btn-danger\">Close<\a>\n"
+						+		"</div>\n"
 						+	"</div>\n";
 						
 		//question 11
@@ -93,7 +133,11 @@
 						+		"<div class=\"progress\">\n"
 						+			"<div class=\"bar bar-success\" style=\"width: 83.3%\"></div>\n"
 						+ 	 	"</div>\n"
-						+	 	"<a id=\"btnQ11\" class=\"btn btn-primary\">Next</a>\n"
+						+ 		"<a id=\"btnPrev11\" class=\"btn btn-primary pull-left\">Previous</a>\n"
+						+	 	"<div id=\"QuestionNavButtons\" class=\"pull-right\">\n"
+						+	 		"<a id=\"btnQ11\" class=\"btn btn-primary\">next</a>\n"
+						+			"<a id=\"btnClose\" class=\"btn btn-danger\">Close<\a>\n"
+						+		"</div>\n"
 						+	"</div>\n";
 		
 		//question 12
@@ -101,19 +145,28 @@
 						+		"<div class=\"progress\">\n"
 						+			"<div class=\"bar bar-success\" style=\"width: 91.4%\"></div>\n"
 						+ 	 	"</div>\n"
-						+	 	"<a id=\"btnQ12\" class=\"btn btn-primary\">Next</a>\n"
+						+ 		"<a id=\"btnPrev12\" class=\"btn btn-primary pull-left\">Previous</a>\n"
+						+	 	"<div id=\"QuestionNavButtons\" class=\"pull-right\">\n"
+						+	 		"<a id=\"btnQ12\" class=\"btn btn-primary\">next</a>\n"
+						+			"<a id=\"btnClose\" class=\"btn btn-danger\">Close<\a>\n"
+						+		"</div>\n"
 						+	"</div>\n";
 		//question 13
 		var question13 =	"<div class=\"hide\" id=\"question13\">\n"
 						+		"<div class=\"progress\">\n"
 						+			"<div class=\"bar bar-success\" style=\"width: 100%\"></div>\n"
 						+ 	 	"</div>\n"
-						+	 	"<a id=\"btnQ13\" class=\"btn btn-primary\">Next</a>\n"
+						+ 		"<a id=\"btnPrev13\" class=\"btn btn-primary pull-left\">Previous</a>\n"
+						+		"<div id=\"QuestionNavButtons\" class=\"pull-right\">\n"
+						+	 		"<a id=\"btnQ13\" class=\"btn btn-success\">Save</a>\n"
+						+			"<a id=\"btnClose\" class=\"btn btn-danger\">Close<\a>\n"
+						+		"</div>\n"
 						+	"</div>\n";
 		
 		//onload
 		$("#question").append(question1,question2,question3,question4,question5,question6,question7,question8,question9,question10,question11,question12,question13);
 		
+		//next buttons
 		$("#btnQ1").click(function(){
 			
 			$("#question1").hide();
@@ -189,6 +242,84 @@
 			
 			$("#question12").hide();
 			$("#question13").show();
+		});
+		
+		//previous buttons
+		$("btnPrev2").click(function(){
+			
+			$("#question2").hide();
+			$("#question1").show();
+		});
+		
+		
+		$("#btnPrev3").click(function(){
+			
+			$("#question3").hide();
+			$("#question2").show();
+		});
+		
+		
+		$("#btnPrev4").click(function(){
+			
+			$("#question4").hide();
+			$("#question3").show();
+		});
+		
+		
+		$("#btnPrev5").click(function(){
+			
+			$("#question5").hide();
+			$("#question4").show();
+		});
+		
+		
+		$("#btnPrev6").click(function(){
+			
+			$("#question6").hide();
+			$("#question5").show();
+		});
+		
+	
+		$("#btnPrev7").click(function(){
+			
+			$("#question7").hide();
+			$("#question6").show();
+		});
+		
+		$("#btnPrev8").click(function(){
+			
+			$("#question8").hide();
+			$("#question7").show();
+		});
+		
+		$("#btnPrev9").click(function(){
+			
+			$("#question9").hide();
+			$("#question8").show();
+		});
+		
+		$("#btnPrev10").click(function(){
+			
+			$("#question10").hide();
+			$("#question9").show();
+		});
+		
+		$("#btnPrev11").click(function(){
+			
+			$("#question11").hide();
+			$("#question10").show();
+		});
+		
+		$("#btnPrev12").click(function(){
+			
+			$("#question12").hide();
+			$("#question11").show();
+		});
+		
+		$("#btnPrev13").click(function(){
+			
+			$("#question13").hide();
+			$("#question12").show();
 		});
 		
 	});
