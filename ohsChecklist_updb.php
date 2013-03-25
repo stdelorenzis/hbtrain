@@ -30,8 +30,11 @@ print(  $q2 ."</br>" .
         $q11 ."</br>" .
         $q12);
 		
-echo (date("Y/m/d H:i:s e"));
-$now = strtotime(now());
+echo (date("Y/m/d"));
+echo $time = mktime();
+//find system time.
+
+
 
 
 
