@@ -486,22 +486,23 @@ function get_ohsScript()
 			
 			$("#question13").hide();
 			$("#question12").show();
-		});';	
-		
-	echo $OHSscript;
+		});';
 	
+	
+
+	echo $OHSscript;
 }
 
 function close_ohsModal()
 {
 	$close_ohsModal = '
-		
-	$(".ohsModalClose").click(function(){
-		confirm("Are you sure you want to close?");
-		$("#ohsChecklist").modal("hide");
-	});';
 	
-	echo $close_modal;
-
+		$(".ohsModalClose").click(function(){
+			confirm("Are you sure you want to close? All progress will be lost.");
+			$("#ohsChecklist").modal("hide");
+		});';
+	
+		
+	echo $close_ohsModal;
 }
 ?>
