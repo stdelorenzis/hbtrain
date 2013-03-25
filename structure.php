@@ -56,9 +56,10 @@ function get_ohsScript()
 						+" 		</div>\n"
 						+"	</div>\n"
 						+" 	<div class=\"row-fluid\">\n"
+						+"		<input type=\"hidden\" id=\"q1\" value=\"\"/>\n"
 						+" 		<div class=\"span12 text-center btn-group\" data-toggle=\"buttons-radio\">\n"
-						+" 			<button type=\"button\" class=\"btn btn-large\" id=\"q1BtnYes\"> Yes </button>\n"
-						+"			<button type=\"button\" class=\"btn btn-large\" id=\"q1BtnNo\"> No </button>\n"
+						+" 			<button type=\"button\" class=\"btn btn-large\" value=\"yes\" id=\"q1BtnYes\"> Yes </button>\n"
+						+"			<button type=\"button\" class=\"btn btn-large\" value=\"No\" id=\"q1BtnNo\"> No </button>\n"
 						+"		</div>\n"
 						+"	</div>\n"
 						+"	<a id=\"btnQ1\" class=\"btn btn-primary pull-right\">Next</a>\n"
@@ -80,7 +81,7 @@ function get_ohsScript()
 						+" 		</div>\n"
 						+"	</div>\n"
 						+" 	<div class=\"row-fluid text-center\">\n"
-						+" 		<select class=\"text-center\">\n"
+						+" 		<select class=\"text-center\" name=\"q2\">\n"
 						+" 			<option>P1</option>\n"
 						+"			<option>P2</option> //this will be downloaded from db \n"
 						+"		</select>\n" 
@@ -100,6 +101,7 @@ function get_ohsScript()
 						+" 		</div>\n"
 						+"	</div>\n"
 						+" 	<div class=\"row-fluid\">\n"
+						+"		<input type=\"hidden\" id=\"q3\" value=\"\"/>\n"
 						+" 		<div class=\"span12 text-center btn-group\" data-toggle=\"buttons-radio\">\n"
 						+" 			<button type=\"button\" class=\"btn btn-large\" id=\"q3BtnYes\"> Yes </button>\n"
 						+"			<button type=\"button\" class=\"btn btn-large\" id=\"q3BtnNo\"> No </button>\n"
@@ -121,6 +123,7 @@ function get_ohsScript()
 						+" 		</div>\n"
 						+" 	</div>\n"
 						+" 	<div class=\"row-fluid\">\n"
+						+"		<input type=\"hidden\" id=\"q4\" value=\"\"/>\n"
 						+" 		<div class=\"span12 text-center btn-group\" data-toggle=\"buttons-radio\">\n"
 						+" 			<button type=\"button\" class=\"btn btn-large\" id=\"q4BtnYes\"> Yes </button>\n"
 						+"			<button type=\"button\" class=\"btn btn-large\" id=\"q4BtnNo\"> No </button>\n"
@@ -142,6 +145,7 @@ function get_ohsScript()
 						+" 		</div>\n"
 						+"	</div>\n"
 						+" 	<div class=\"row-fluid\">\n"
+						+"		<input type=\"hidden\" id=\"q5\" value=\"\"/>\n"
 						+" 		<div class=\"span12 text-center btn-group\" data-toggle=\"buttons-radio\">\n"
 						+" 			<button type=\"button\" class=\"btn btn-large\" id=\"q5BtnYes\"> Yes </button>\n"
 						+"			<button type=\"button\" class=\"btn btn-large\" id=\"q5BtnNo\"> No </button>\n"
@@ -163,6 +167,7 @@ function get_ohsScript()
 						+" 		</div>\n"
 						+"	</div>\n"
 						+" 	<div class=\"row-fluid\">\n"
+						+"		<input type=\"hidden\" id=\"q6\" value=\"\"/>\n"
 						+" 		<div class=\"span12 text-center btn-group\" data-toggle=\"buttons-radio\">\n"
 						+" 			<button type=\"button\" class=\"btn btn-large\" id=\"q6BtnYes\"> Yes </button>\n"
 						+"			<button type=\"button\" class=\"btn btn-large\" id=\"q6BtnNo\"> No </button>\n"
@@ -192,6 +197,7 @@ function get_ohsScript()
 						+" 		</div>\n"
 						+"	</div>\n"
 						+" 	<div class=\"row-fluid\">\n"
+						+"		<input type=\"hidden\" id=\"q7\" value=\"\"/>\n"
 						+" 		<div class=\"span12 text-center btn-group\" data-toggle=\"buttons-radio\">\n"
 						+" 			<button type=\"button\" class=\"btn btn-large btn-warning\" id=\"q7BtnYes\"> The above <em>Look Close</em> items have been considered</button>\n"
 						+"		</div>\n"
@@ -221,6 +227,7 @@ function get_ohsScript()
 						+" 		</div>\n"
 						+" 	</div>\n"
 						+" 	<div class=\"row-fluid\">\n"
+						+"		<input type=\"hidden\" id=\"q8\" value=\"\"/>\n"
 						+" 		<div class=\"span12 text-center btn-group\" data-toggle=\"buttons-radio\">\n"
 						+" 			<button type=\"button\" class=\"btn btn-large btn-warning\" id=\"q8BtnYes\"> The above <em>Look-For-The-Hidden</em> items have been considered</button>\n"
 						+"		</div>\n"
@@ -248,6 +255,7 @@ function get_ohsScript()
 						+" 		</div>\n"
 						+" 	</div>\n"
 						+" 	<div class=\"row-fluid\">\n"
+						+"		<input type=\"hidden\" id=\"q9\" value=\"\"/>\n"
 						+" 		<div class=\"span12 text-center btn-group\" data-toggle=\"buttons-radio\">\n"
 						+" 			<button type=\"button\" class=\"btn btn-large btn-warning\" id=\"q9BtnYes\"> The above <em>Look Wide</em> items have been considered</button>\n"
 						+"		</div>\n"
@@ -267,7 +275,8 @@ function get_ohsScript()
 						+" 		</div>\n"
 						+"	</div>\n"
 						+" 	<div class=\"row-fluid text-center\">\n"
-						+"		<textarea rows=\"4\"></textarea>\n"
+						+"		<input type=\"hidden\" id=\"q10\" value=\"\"/>\n"
+						+"		<textarea rows=\"4\" name=\"q10\"></textarea>\n"
 						+" 	</div>\n"
 						+"	<a id=\"btnPrev10\" class=\"btn btn-primary pull-left\">Previous</a>\n"
 						+"	<a id=\"btnQ10\" class=\"btn btn-primary pull-right\">Next</a>\n"
@@ -284,6 +293,7 @@ function get_ohsScript()
 						+" 		</div>\n"
 						+"	</div>\n"
 						+" 	<div class=\"row-fluid\">\n"
+						+"		<input type=\"hidden\" id=\"q11\" value=\"\"/>\n"
 						+" 		<div class=\"span12 text-center btn-group\" data-toggle=\"buttons-radio\">\n"
 						+" 			<button type=\"button\" class=\"btn btn-large\" id=\"q11BtnYes\"> Yes </button>\n"
 						+"			<button type=\"button\" class=\"btn btn-large\" id=\"q11BtnNo\"> No </button>\n"
@@ -305,6 +315,7 @@ function get_ohsScript()
 						+" 		</div>\n"
 						+" 	</div>\n"
 						+" 	<div class=\"row-fluid\">\n"
+						+"		<input type=\"hidden\" id=\"q12\" value=\"\"/>\n"
 						+" 		<div class=\"span12 text-center btn-group\" data-toggle=\"buttons-radio\">\n"
 						+" 			<button type=\"button\" class=\"btn btn-large\" id=\"q12BtnYes\"> Yes </button>\n"
 						+"			<button type=\"button\" class=\"btn btn-large\" id=\"q12BtnNo\"> No </button>\n"
@@ -328,12 +339,82 @@ function get_ohsScript()
 						+"	<a id=\"btnQ13\" class=\"btn btn-success pull-right\">Save</a>\n"
 						+"</div>\n";
 		
-		//onload
+		//onload load all questions
 		$("#question").append(question1,question2,question3,question4,question5,question6,question7,question8,question9,question10,question11,question12,question13);
+		
+		//set all values
+		//q1
+		$("#q1BtnYes").click(function(){
+			$("#q1").val("Yes");
+		});
+		$("#q1BtnNo").click(function(){
+			$("#q1").val("No");
+		});
+		
+		//q3
+		$("#q3BtnYes").click(function(){
+			$("#q3").val("Yes");
+		});
+		$("#q3BtnNo").click(function(){
+			$("#q3").val("No");
+		});
+		$("#q3BtnNA").click(function(){
+			$("#q3").val("NA");
+		});
+		
+		//q4
+		$("#q4BtnYes").click(function(){
+			$("#q4").val("Yes");
+		});
+		$("#q4BtnNo").click(function(){
+			$("#q4").val("No");
+		});
+		$("#q4BtnNA").click(function(){
+			$("#q4").val("NA");
+		});
+		
+		//q5
+		$("#q5BtnYes").click(function(){
+			$("#q5").val("Yes");
+		});
+		$("#q5BtnNo").click(function(){
+			$("#q5").val("No");
+		});
+		$("#q5BtnNA").click(function(){
+			$("#q5").val("NA");
+		});
+		
+		//q6
+		$("#q6BtnYes").click(function(){
+			$("#q6").val("Yes");
+		});
+		$("#q6BtnNo").click(function(){
+			$("#q6").val("No");
+		});
+		$("#q6BtnNA").click(function(){
+			$("#q6").val("NA");
+		});
+		
+		//q7
+		$("#q7BtnYes").click(function(){
+			$("#q7").val("Yes");
+		});
+		
+		//q8
+		$("#q8BtnYes").click(function(){
+			$("#q8").val("Yes");
+		});
+		
+		//q9
+		$("#q9BtnYes").click(function(){
+			$("#q9").val("Yes");
+		});
+		
 		
 		//next buttons
 		$("#btnQ1").click(function(){
-			
+			var q1Value = $("#q1").val();
+			alert(q1Value);
 			$("#question1").hide();
 			$("#question2").show();
 		});
