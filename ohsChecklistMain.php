@@ -66,9 +66,11 @@ $(document).ready(function(){
 			<h3 id="myModalLabel">OHS Checklist</h3>
 			</div>
 		<div class="modal-body">
-			<div id="question">
-				<!--OHS questions-->
-			</div>
+			<form id="ohsChecklistForm" action="ohsChecklist_updb.php" method="post">
+				<div id="question">
+					<!--OHS questions-->
+				</div>
+			</form>
 		</div>
 		<div class="modal-footer">
 			<button class="btn btn-danger ohsModalClose" aria-hidden="true">Close</button>
