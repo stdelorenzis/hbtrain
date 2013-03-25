@@ -1,8 +1,5 @@
-<script>
-	var d=new Date()
-	
-</script>
 <?php
+require 'db.php';
 
 $q1 = $_POST['q1'];
 $q2 = $_POST['q2'];
@@ -29,10 +26,16 @@ print(  $q2 ."</br>" .
         $q10 ."</br>" .
         $q11 ."</br>" .
         $q12);
+
+date_default_timezone_set('Australia/Melbourne');
+$time = date("H:i:s");
+$date = date("Y/m/d");
+
+$sql = "INSERT INTO ohsChecklist (date, time, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12)
+		VALUES ($date, $time, $q1, $q2, $q3, $q4, $q5, $q6, $q7, $q8, $q9, $q10, $q11, $q12)";
+$res = sql_query($sql);
 		
-echo (date("Y/m/d"));
-echo $time = mktime();
-//find system time.
+
 
 
 
