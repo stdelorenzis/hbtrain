@@ -2,13 +2,18 @@
 
 	require 'structure.php';
 	get_header();
-?>
-<script>
-
-</script>
-</p>
-<a href="#" class="btn" id="tooltipTest" rel="tooltip" data-content="this tooltip">hover over me</a>
-
-<?php
+	
+	echo (date("Y/m/d"));
+	echo $time = mktime();
+	//find system time.
+	
+	echo "</br>";
+	date_default_timezone_set('Australia/Victoria');
+	$time = date("H:i:s");
+	$date = date("Y/m/d"); 
+	
+	echo $time . " ". $date;
+	
+	
 	get_footer();
 ?>
