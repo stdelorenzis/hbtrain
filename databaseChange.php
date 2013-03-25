@@ -1,8 +1,6 @@
 <?php	
 	require 'db.php';
-	require 'structure.php';
-	get_header();
-	
+		
 	$sql = "SELECT * FROM members
 			ORDER BY paid, first_name";
 	$res = mysql_query($sql);
