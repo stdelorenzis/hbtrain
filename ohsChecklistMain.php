@@ -12,7 +12,39 @@ $(document).ready(function(){
 	close_ohsModal();
 ?>
 });
+
+//ajax
+var xmlhttp;
+	
+	function showEntry()
+	{
+		if (window.XMLHttpRequest)
+		{
+			xmlhttp=new XMLHttpRequest();
+		}
+		else
+		{
+			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP"); //ie5 + 6
+		}
+		
+		xmlhttp.onreadystatechange=function()
+		{
+		if (xmlhttp.readyState == 4 && xmlhttp.status==200) //request finished and response  
+			{
+				document.getElementById("completeChecklists").innerHTML = xmlhttp.responseText;
+			}
+		}
+		xmlhttp.open("POST","ohsChecklistTable.php",true); 
+		xmlhttp.send(); //sends request to opened page
+		
+		setTimeout("showEntry()",1000); //use timeout instead of setinterval so that it doesn't start the script over the other one.
+	}			
+
+window.onload = showEntry();
+
+
 </script>
+
 	<div class="container-fluid v-background s-container">
   		<div class="row-fluid header">
 			<div class="span4"><img class="heart" src="img/heartgif.gif"/></div>
@@ -35,17 +67,8 @@ $(document).ready(function(){
 			<div class="span3"></div>
 			<div class="span6">
 				<div class="text-center"><h4>Completed Checklists</h4></div>
-				<table class="table table-bordered">	
-					<tr>
-						<td>Name</td>
-						<td>Date Completed</td>
-						<td>Time Completed</td>
-					</tr>
-					<tr>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
+				<table class="table table-bordered" id="completeChecklists">	
+				<!--Ajax for completed checklists. Updates automatically like future product-->
 				</table>
 			</div>
 			<div class="span3"></div>
