@@ -23,13 +23,16 @@ while ($row = mysql_fetch_array($res))
 		$workplace = "Office";
 		
 	$date = $row['date'];
+	$dateArr  = explode("-",$date);
+	$newDate = $dateArr[2]."-".$dateArr[1]."-".$dateArr[0];
+	
 	$time = $row['time'];
 	
 	print ("
 	<tr>
 		<td></td>
 		<td>$workplace</td>
-		<td>$date</td>
+		<td>$newDate</td>
 		<td>$time</td>
 	</tr>");
 }
