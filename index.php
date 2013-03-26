@@ -6,14 +6,6 @@
 	
 	get_header();
 	
-	//$sql = "SELECT * FROM members WHERE paid = 0";
-	//$res = mysql_query($sql);
-	
-	//$paid = mysql_fetch_array($res);
-	//$amount = count($res);
-	//echo $paid;
-	//echo $amount;
-	
 	$sql = "SELECT * FROM members WHERE paid = 0";
 	$res = mysql_query($sql);
 	
@@ -28,7 +20,7 @@
 </script>
 
 <!-- HTML CONTENT GOES HERE -->
-
+	<!-- This could probably be put in header. Left in html for now-->
 	<div class="container-fluid v-background s-container">
   		<div class="row-fluid header">
 			<div class="span4"><img class="heart" src="img/heartgif.gif"/></div>
