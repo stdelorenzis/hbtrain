@@ -14,26 +14,22 @@ $q10 = $_POST['q10'];
 $q11 = $_POST['q11'];
 $q12 = $_POST['q12'];
 
-echo $q1 ."</br>";
-print(  $q2 ."</br>" .
-		$q3 ."</br>" .
-        $q4 ."</br>" .
-        $q5 ."</br>" .
-        $q6 ."</br>" .
-        $q7 ."</br>" .
-        $q8 ."</br>" .
-        $q9 ."</br>" .
-        $q10 ."</br>" .
-        $q11 ."</br>" .
-        $q12);
-
 date_default_timezone_set('Australia/Melbourne');
 $time = date("H:i:s");
 $date = date("Y/m/d");
 
-$sql = "INSERT INTO ohsChecklist (date, time, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12)
-		VALUES ($date, $time, $q1, $q2, $q3, $q4, $q5, $q6, $q7, $q8, $q9, $q10, $q11, $q12)";
-$res = sql_query($sql);
+$sql = "INSERT INTO ohschecklist (date, time, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12)
+		VALUES ('$date', '$time', '$q1', '$q2', '$q3', '$q4', '$q5', '$q6', '$q7', '$q8', '$q9', '$q10', '$q11', '$q12')";
+$res = mysql_query($sql);
+
+if($res)
+	echo "successful";
+else
+	echo mysql_error();
+
+header("Location: ohsChecklistMain.php");	
+	
+mysql_close($objConnect);
 		
 
 
