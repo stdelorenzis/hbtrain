@@ -17,6 +17,7 @@ $(document).ready(function(){
 });
 	
 	//ajax
+	//Doesn't work yet. Can update the location but markers don't update.
 	/*var xmlhttp;
 	
 	function showEntry()
