@@ -4,36 +4,67 @@ require 'structure.php';
 
 get_header();
 ?>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBR2M-GicedlQIdxvVdKuzLS61KA6_jKYI&sensor=false"></script>
 <script>
+//find location
+<?php
+/*
+$sql = "SELECT * FROM checkin";
+$res = mysql_query($sql);
+
+echo "var locations = [";
+while ($result = mysql_fetch_array($res))
+{
+	$id = $result['id'];
+	$latitude = $result['latitude'];
+	$longitude = $result['longitude'];
+	$name = $result['name'];
+	
+	$location = "['".$name."', ".$latitude.", ".$longitude.", ". $id."], ";
+	echo "$location";	
+}
+
+
+echo "];";*/
+?>
 $(document).ready(function(){
-	$("#checkInBtn").click(function(){
-		
-		function getLocation()
-		{
-			if (navigator.geolocation)
-			{
-				navigator.geolocation.getCurrentPosition(showPosition);
-				
-			}
-			else
-			{
-				alert("Geolocation is not supported by this browser");
-			}
-		}
-		
-		function showPosition(position)
-		{
-			var latitude = position.coords.latitude;
-			var longitude = position.coords.longitude;
-			$("#latitude").val(latitude);
-			$("#longitude").val(longitude);
-			$("form").submit();
-		}
-		
-		getLocation();
-		
-	});
+	
+<?php 
+	checkinBtn();
+	find_location();
+	createMap();
+?>
 });
+	
+	//ajax
+	/*var xmlhttp;
+	
+	function showEntry()
+	{
+		if (window.XMLHttpRequest)
+		{
+			xmlhttp=new XMLHttpRequest();
+		}
+		else
+		{
+			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP"); //ie5 + 6
+		}
+		
+		xmlhttp.onreadystatechange=function()
+		{
+		if (xmlhttp.readyState == 4 && xmlhttp.status==200) //request finished and response  
+			{
+				document.getElementById("mapDiv").innerHTML = xmlhttp.responseText;
+			}
+		}
+		xmlhttp.open("POST","mapUpdate.php",true); 
+		xmlhttp.send(); //sends request to opened page
+		
+		setTimeout("showEntry()",1000); //use timeout instead of setinterval so that it doesn't start the script over the other one.
+	}	
+	
+	showEntry();*/
+	
 </script>
 	<div class="container-fluid v-background s-container">
   		<div class="row-fluid header">
@@ -53,7 +84,18 @@ $(document).ready(function(){
 				</form>
 				<a id="checkInBtn" class="btn btn-success btn-block btn-large">Check In</a>
 			</div>
-			</div class="span3"></div>
+			<div class="span3"></div>
+		</div>
+		<div class="row-fluid">
+			<div class="span1"></div>
+				<div class="span10">
+					<div id="mapDiv">
+					</div>
+					<div id="map-canvas" style="width:100%; height:500px;">
+						<!-- map here-->
+					</div>
+				</div>
+			<div class="span1"></div>
 		</div>
 		<div class="row-fluid">
 			<div class="span3"></div>
