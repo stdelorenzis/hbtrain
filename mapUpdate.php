@@ -1,5 +1,4 @@
 <script>
-
 <?php
 	$sql = "SELECT * FROM checkin";
 	$res = mysql_query($sql);
@@ -19,4 +18,6 @@
 	
 	echo "];";
 ?>
+
+
 </script>
