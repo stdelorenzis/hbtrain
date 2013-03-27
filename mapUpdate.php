@@ -1,6 +1,7 @@
 <script>
 <?php
-	$sql = "SELECT * FROM checkin";
+	$today = date("Y-m-d");
+	$sql = "SELECT * FROM checkin WHERE date = $today";
 	$res = mysql_query($sql);
 	
 	echo "var locations = [";

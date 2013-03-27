@@ -73,7 +73,7 @@ $(document).ready(function(){
 				<div class="span10">
 					<div id="mapDiv">
 					</div>
-					<div id="map-canvas" class="well" style="width:100%; height:500px;">
+					<div id="map-canvas" style="width:100%; height:500px;">
 						<!-- map here-->
 					</div>
 				</div>
