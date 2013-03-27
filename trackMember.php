@@ -7,26 +7,6 @@ get_header();
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBR2M-GicedlQIdxvVdKuzLS61KA6_jKYI&sensor=false"></script>
 <script>
 //find location
-<?php
-/*
-$sql = "SELECT * FROM checkin";
-$res = mysql_query($sql);
-
-echo "var locations = [";
-while ($result = mysql_fetch_array($res))
-{
-	$id = $result['id'];
-	$latitude = $result['latitude'];
-	$longitude = $result['longitude'];
-	$name = $result['name'];
-	
-	$location = "['".$name."', ".$latitude.", ".$longitude.", ". $id."], ";
-	echo "$location";	
-}
-
-
-echo "];";*/
-?>
 $(document).ready(function(){
 	
 <?php 
@@ -78,7 +58,7 @@ $(document).ready(function(){
 			<div class="span3"></div>
 			<div class="span6 text-center">
 				<form method="post" action="checkin_indb.php">
-					<input name="checkinName" type="text" placeholder="Type your name here">
+					<input name="checkinName" id="checkinName" value="" type="text" placeholder="Type your name here">
 					<input type="hidden" name="latitude" id="latitude" value="-1">
 					<input type="hidden" name="longitude" id="longitude" value="-1">
 				</form>
@@ -86,12 +66,13 @@ $(document).ready(function(){
 			</div>
 			<div class="span3"></div>
 		</div>
+		</p>
 		<div class="row-fluid">
 			<div class="span1"></div>
 				<div class="span10">
 					<div id="mapDiv">
 					</div>
-					<div id="map-canvas" style="width:100%; height:500px;">
+					<div id="map-canvas" class="well" style="width:100%; height:500px;">
 						<!-- map here-->
 					</div>
 				</div>

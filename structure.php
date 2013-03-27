@@ -752,6 +752,12 @@ function checkinBtn(){
 	$checkinBtn = '
 	$("#checkInBtn").click(function(){
 		
+		if ($("#checkinName").val()=="")
+			{
+				alert("Please enter a name");
+				return;
+			}
+			
 		function getLocation()
 		{
 			if (navigator.geolocation)

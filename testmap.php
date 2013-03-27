@@ -9,11 +9,16 @@ get_header();
 ?>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBR2M-GicedlQIdxvVdKuzLS61KA6_jKYI&sensor=false"></script>
 <script type="text/javascript">
-<?php
+
+
+$(document).ready(function(){
+
+	<?php
 			$sql = "SELECT * FROM checkin";
 			$res = mysql_query($sql);
 			
-			echo "var locations = [";
+			echo "var locations = [
+			";
 			while ($result = mysql_fetch_array($res))
 			{
 				$id = $result['id'];
@@ -21,15 +26,16 @@ get_header();
 				$longitude = $result['longitude'];
 				$name = $result['name'];
 				
-				$location = "['".$name."', ".$latitude.", ".$longitude.", ". $id."], ";
+				$location = "['".$name."', ".$latitude.", ".$longitude.", ". $id."], 
+				";
 				echo "$location";	
 			}
 			
 			
-			echo "];";
+			echo "
+			];";
 ?>
 
-$(document).ready(function(){
 	var geocoder;
 	var map;
 	
