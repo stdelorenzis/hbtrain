@@ -1,4 +1,5 @@
 <?php
+
 function get_header()
 {
                                                                                  
@@ -790,5 +791,12 @@ function checkinBtn(){
 	
 	echo $checkinBtn;
 
+}
+
+function get_dateTime()
+{
+	date_default_timezone_set('Australia/Melbourne');
+	$time = date("H:i:s");
+	$date = date("Y/m/d");
 }
 ?>
