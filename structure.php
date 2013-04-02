@@ -11,8 +11,9 @@ function get_header()
 				<meta name=\"viewport\" content=\"width=device-width', initial-scale=1.0\"> 
 				<!--bootstrap-->                                                      
 				<link href=\"css/bootstrap.min.css\" rel=\"stylesheet\" media=\"screen\">    
-				<link href=\"css/bootstrap-responsive.min.css\" rel=\"stylesheet\">    
+				<link href=\"css/bootstrap-responsive.min.css\" rel=\"stylesheet\" media=\"handheld and max-width:960px\">    
 				<link href=\"css/style.css\" rel=\"stylesheet\" media=\"screen\">
+				<link href=\"css/styleRes.css\" rel=\"stylesheet\" media=\"handheld and max-width: 960px\">
 			</head>                                                                    
 		<body> 
 			<script src=\"http://code.jquery.com/jquery-latest.js\"></script>

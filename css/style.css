@@ -40,3 +40,13 @@ body
 {
 	margin-top: 2%;
 }
+
+ .loginInputControl
+{
+	height: 10em;
+}
+
+input[type="text"] .loginInput
+{
+	height: 40px;
+}
