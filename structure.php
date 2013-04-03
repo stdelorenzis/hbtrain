@@ -39,6 +39,14 @@ function get_footer()
 
 }
 
+function get_app_footer()
+{
+	$footerHtml = "	
+		</body>
+	</html>";
+	echo $footerHtml;
+}
+
 function get_ohsScript()
 {
 	$OHSscript = '
