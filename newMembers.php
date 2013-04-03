@@ -5,7 +5,8 @@
 	
 	get_header();
 	
-	$sql = "SELECT first_name AS 'fname', last_name AS 'lname' FROM members";
+	//trying to send db data to cross check if name exists already.
+	/*$sql = "SELECT first_name AS 'fname', last_name AS 'lname' FROM members";
 	$res = mysql_query($sql);
 
 	if (mysql_num_rows($res) != 0)
@@ -14,25 +15,52 @@
 			{
 				$field = mysql_fetch_array($res);
 				$fname = $field['fname'];
-				$lname = $field['lname']; //find users names and create error if already exists.
+				$lname = $field['lname']; 
+				print ("<input type=\"hidden\" id=\"fNameHidden[$i]\" value=\"$fname\">\n
+						<input type=\"hidden\" id=\"lNameHidden[$i]\" value=\"$lname\">");
 			}
-		}
-	}
+		}*/
+	
 						
 ?>
 	<script>
 		$(document).ready(function(){
-			$("#newMemberBtn").click(function(){
-				var fname = $('#inputFname').val();
-				var lname = $('#inputLname').val();
-				alert(fname + ' ' + lname);
-			<?php 	
-				$fname = print("fname");
-				$lname = print("lname");
-				print ("alert($fname + ' ' + $lname);\n
-						return;");
+			$("#newMember").click(function(){
+				var fname = $("#inputFname").val();
+				var lname = $("#inputLname").val();
+				
+				if (lname =="" && fname=="")
+				{
+					$("#alertFname").text("Please enter a First Name");
+					$("#alertFname").addClass("alert alert-error");
+					$("#alertLname").text("Please enter a Last Name");
+					$("#alertLname").addClass("alert alert-error");
+					return false;
+				}
+				
+				if (fname=="" && lname !="")
+				{
+					$("#alertFname").text("Please enter a First Name");
+					$("#alertFname").addClass("alert alert-error");
 					
-				?>
+					//if lname has text remove alert
+					$("#alertLname").text("");
+					$("#alertLname").removeClass("alert alert-error");
+					return false;
+				}
+				
+				
+				if (lname =="" && fname != "")
+				{
+					$("#alertLname").text("Please enter a Last Name");
+					$("#alertLname").addClass("alert alert-error");
+					
+					//if fname has text remove alert
+					$("#alertFname").text("");
+					$("#alertFname").removeClass("alert alert-error");
+					return false;
+				}
+				
 				
 			});
 		});
@@ -48,29 +76,26 @@
 		<div class="row-fluid">
 			<div class="span3"></div>
 			<div class="span6">
-			<input type="hidden" value="$fNameArr" id="fNameArr">
-			<input type="hidden" value="$lNameArr" id="lNameArr">
 				<form class="form-horizontal" action="createNewMember.php" method="post">
 					<div class="control-group">
 						<label class="control-label" for="inputFname">First Name</label>
 						<div class="controls">
 							<input class="input-xlarge" type="text" name="fname" id="inputFname" placeholder="First Name">
+							<span id="alertFname"></span>
 						</div>
 					</div>
 					<div class="control-group">
 						<label class="control-label" for="inputLname">Last Name</label>
 						<div class="controls">
 							<input class="input-xlarge" type="text" name="lname" id="inputLname" placeholder="Last Name">
+							<span id="alertLname"></span>
 							</p>
 							</p>
-							<button type="submit" class="btn btn-success">Sign Up</button>
+							<button id="newMember" type="submit" class="btn btn-success">Sign Up</button>
 							<a class="btn btn-danger" href="index.php">Cancel</a>
 						</div>
 					</div>
 				</form>
-				<div>
-					<button id="newMemberBtn" class="btn btn-warning">check</button>
-				</div>
 			</div>
 			<div class="span3"></div>
 		</div>
