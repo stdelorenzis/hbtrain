@@ -5,7 +5,20 @@
 	
 	get_header();
 	
-	
+	$sql = "SELECT first_name AS 'fname', last_name AS 'lname' FROM members";
+	$res = mysql_query($sql);
+
+	if (mysql_num_rows($res) != 0)
+		{
+		for ($i=0; $i<mysql_num_rows($res); $i++)
+			{
+				$field = mysql_fetch_array($res);
+				$fname = $field['fname'];
+				$lname = $field['lname']; //find users names and create error if already exists.
+			}
+		}
+	}
+						
 ?>
 	<script>
 		$(document).ready(function(){
@@ -18,17 +31,7 @@
 				$lname = print("lname");
 				print ("alert($fname + ' ' + $lname);\n
 						return;");
-					/*$sql = "SELECT * FROM members WHERE first_name = fname and last_name = lname";
-					$res = mysql_query($sql);
 					
-					if (mysql_num_row($res) != 0)
-						{
-				?>
-						alert("User exists");
-						return false;
-						
-				<?php
-						}*/
 				?>
 				
 			});
@@ -45,6 +48,8 @@
 		<div class="row-fluid">
 			<div class="span3"></div>
 			<div class="span6">
+			<input type="hidden" value="$fNameArr" id="fNameArr">
+			<input type="hidden" value="$lNameArr" id="lNameArr">
 				<form class="form-horizontal" action="createNewMember.php" method="post">
 					<div class="control-group">
 						<label class="control-label" for="inputFname">First Name</label>
@@ -58,7 +63,7 @@
 							<input class="input-xlarge" type="text" name="lname" id="inputLname" placeholder="Last Name">
 							</p>
 							</p>
-							<button class="btn btn-success">Sign Up</button> <!--type="submit" id="newMemberBtn"  -->
+							<button type="submit" class="btn btn-success">Sign Up</button>
 							<a class="btn btn-danger" href="index.php">Cancel</a>
 						</div>
 					</div>
