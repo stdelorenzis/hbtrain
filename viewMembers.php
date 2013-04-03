@@ -47,36 +47,28 @@ var xmlhttp;
 			<legend class="text-center"><h3>Registered Memebers</h3></legend>
 		</div>
 		<div class="row-fluid">
-			<div class="span3"></div>
-			<div class="span6" id="memberTable">
+			<div class="span6 offset3" id="memberTable">
 			<!--autoupdate database appears here-->
 			</div>
-			<div class="span3"></div>
 		</div>
 		</p>
 		<!--Nav buttons-->
 		<div class="row-fluid">
-			<div class="span3"></div>
-			<div class="span6">
+			<div class="span6 offset3">
 				<a class="btn btn-success btn-block btn-large" href="newMembers.php"><i class="icon-user icon-white"></i>&nbsp&nbspRegister Now</a>
 			</div>
-			<div class="span3"></div>
 		</div>
 		</p>
 		<div class="row-fluid">
-			<div class="span3"></div>
-			<div class="span6">
-				<a class="btn btn-warning btn-block btn-large" href="index.php"><i class="icon-shopping-cart icon-white"></i>&nbsp&nbspPayment Options</a>
+			<div class="span6 offset3">
+				<a class="btn btn-warning btn-block btn-large" href="paymentOptions.php"><i class="icon-shopping-cart icon-white"></i>&nbsp&nbspPayment Options</a>
 			</div>
-			<div class="span3"></div>
 		</div>
 		</p>
 		<div class="row-fluid">
-			<div class="span3"></div>
-			<div class="span6">
+			<div class="span6 offset3">
 				<a class="btn btn-primary btn-block btn-large" href="index.php"><i class="icon-home icon-white"></i>&nbsp&nbspHome</a>
 			</div>
-			<div class="span3"></div>
 		</div>
 	</div>
 	
