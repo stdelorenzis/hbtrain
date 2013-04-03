@@ -27,8 +27,7 @@
   			<div class="span8 headerText"><h2>Heartbeat Training Centre</h2></div>
    		</div>
 		<div class="row-fluid menuButtons">
-			<div class="span3"></div>
-			<div class="span6">
+			<div class="span6 offset3">
 				<a class="btn btn-block btn-large" href="details.php"><i class="icon-th"></i>&nbsp&nbspDetails</a>
 				<a class="btn btn-success btn-block btn-large" href="newMembers.php"><i class="icon-user icon-white"></i>&nbsp&nbspNew Member</a>
 				<a class="btn btn-block btn-large" href="viewMembers.php"><span data-toggle="tooltip" title="New members need to pay" class="badge badge-important"><?php echo $count?></span>&nbsp&nbsp<i class="icon-search"></i>&nbsp&nbspRegistered Members</a>
@@ -36,7 +35,6 @@
 				<a class="btn btn-warning btn-block btn-large" href="trackMember.php"><i class="icon-tag icon-white"></i>&nbsp&nbspTrack Members</a>
 				<a class="btn btn-block btn-large" href="ohsChecklistMain.php"><i class="icon-tick"></i>&nbsp&nbspOHS Checklist</a>
 			</div>
-			<div class="span3"></div>
 		</div>
 	</div>
 <?php
