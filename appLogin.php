@@ -11,7 +11,7 @@
    		</div>
 		</br>
 		<div class="row-fluid">
-			<form class="form-horizontal span10 offset1">
+			<form class="form-horizontal span10 offset1" method="post" action="appIndex.php">
 				<div class="loginInputControl text-center">
 					<input class="loginInput" type="text" id="inputUser" placeholder="Username">
 					</br>
