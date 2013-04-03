@@ -19,6 +19,10 @@
 		$username = strtolower($fname_arr[0].$lname);
 	}
 	
+	//convert first letter to uppercase. Put here so that username has no ucase.
+	$fname = ucfirst($fname);
+	$lname = ucfirst($lname);
+	
 	$sql = "INSERT INTO members(first_name, last_name, paid, username)
 				VALUES('$fname', '$lname', 0, '$username')";
 	$res = mysql_query($sql);
