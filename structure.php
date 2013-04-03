@@ -801,4 +801,47 @@ function checkinBtn(){
 	echo $checkinBtn;
 
 }
+
+function geo(){
+
+	$geoCode = '
+		function getLocation()
+		{
+			if (navigator.geolocation)
+			{
+				navigator.geolocation.getCurrentPosition(showPosition);
+				
+			}
+			else
+			{
+				alert("Geolocation is not supported by this browser");
+			}
+		}
+		
+		function showPosition(position)
+		{
+			var latitude = position.coords.latitude;
+			var longitude = position.coords.longitude;
+			$("#long").text(longitude);
+			$("#lat").text(latitude);
+		}
+		
+		getLocation();
+	';
+
+	echo $geoCode;
+	
+	
+}
+
+function createMemberValidation(){
+}
+
+function loginValidation(){
+	$sql = "SELECT * FROM members";
+	$res = mysql_query($sql);
+	
+	
+
+}
 ?>

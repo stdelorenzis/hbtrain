@@ -4,9 +4,16 @@
 	
 	get_header();
 ?>
+<script>
+$(document).ready(function(){
+<?php 
+	geo();
+?>
+});
+</script>
 	<div class="container-fluid v-background s-container">
   		<div class="row-fluid header text-center">
-  			<div class="span12 headerText"><h3>Alerton</p>Heartbeat</h3></div>
+  			<div class="span12 headerText"><h3>Heartbeat</h3></div>
    		</div>
 		<div class="row-fluid text-center">
 			<div class="span10 offset1">
@@ -16,13 +23,14 @@
 		</div>
 		</br>
 		<div class="row-fluid">
-			<div class="span10 offset1 text-center">
+			<div class="span10 offset1 text-center" id="personName">
 				FirstName LastName
 			</div>
 		</div>		
 		<div class="row-fluid">
-			<div class="span10 offset1 text-center">
-				Location Identified: SiteName
+			<div class="span12 text-center">
+				Location Identified: </p>
+				<span id="long"></span>&nbsp <span id="lat"></span>
 			</div>
 		</div>
 	</div>
