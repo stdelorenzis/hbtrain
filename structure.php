@@ -58,6 +58,16 @@ function get_ohsScript()
 				
 		});
 		
+		function disableZoom(){
+			$("head meta[name=viewport]").remove();
+			$("head").prepend("<meta name=\"viewport\" content=\"user-scalable=0\" />");
+		}
+		
+		function addZoom(){
+			$("head meta[name=viewport]").remove();
+			$("head").prepend("<meta name=\"viewport\" content=\"user-scalable=1\" />");
+		}
+		
 		//question 1
 		var question1 = "<div class=\"show\" id=\"question1\">\n"
 						+"	<div class=\"progress\">\n"
@@ -484,13 +494,14 @@ function get_ohsScript()
 			{
 				$("#question1").hide();
 				$("#question2").show();
-				$("head meta[name=viewport]").remove();
-				$("head").prepend("<meta name=\"viewport\" content=\"user-scalable=0\" />");
+				disableZoom();
 			}
 		});
 		
 		
+		
 		$("#btnQ2").click(function(){
+			addZoom();
 			var q2Value = $("#q2").val();
 			if (q2Value == "Select")
 			{
@@ -499,8 +510,7 @@ function get_ohsScript()
 			}
 			$("#question2").hide();
 			$("#question3").show();
-			$("head meta[name=viewport]").remove();
-			$("head").prepend("<meta name=\"viewport\" content=\"user-scalable=1\" />");
+			
 		});
 		
 		
@@ -630,14 +640,14 @@ function get_ohsScript()
 		//previous buttons
 		
 		$("#btnPrev2").click(function(){
-			
+			addZoom();
 			$("#question2").hide();
 			$("#question1").show();
 		});
 		
 		
 		$("#btnPrev3").click(function(){
-			
+			disableZoom();
 			$("#question3").hide();
 			$("#question2").show();
 		});
