@@ -57,7 +57,7 @@ window.onload = showEntry();
 			<div class="span3"></div>
 			<div class="span6">
 				<!--Button to trigger Modal-->
-				<a id="ohsModal" role="button" class="btn btn-block btn-large btn-success">Complete Daily Checklist</a>
+				<button id="ohsModal" role="button" class="btn btn-block btn-large btn-success">Complete Daily Checklist</button>
 			</div>
 			<div class="span3"></div>
 		</div>
