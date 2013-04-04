@@ -246,7 +246,7 @@ function get_ohsScript()
 						+" 	<div class=\"row-fluid\">\n"
 						+"		<input type=\"hidden\" name=\"q8\" id=\"q8\" value=\"-1\"/>\n"
 						+" 		<div class=\"span12 text-center btn-group\" data-toggle=\"buttons-radio\">\n"
-						+" 			<button type=\"button\" class=\"btn btn-large btn-warning btn-block\" id=\"q8BtnYes\"> The above <em>Look-For-The-Hidden</em> items have been considered</button>\n"
+						+" 			<button type=\"button\" class=\"btn btn-large btn-warning\" id=\"q8BtnYes\"> The above <em>Look-For-The-Hidden</em> items </p> have been considered</button>\n"
 						+"		</div>\n"
 						+"	</div></p>\n"
 						+" 	</br>\n"
@@ -275,7 +275,7 @@ function get_ohsScript()
 						+" 	<div class=\"row-fluid\">\n"
 						+"		<input type=\"hidden\" name=\"q9\" id=\"q9\" value=\"-1\"/>\n"
 						+" 		<div class=\"span12 text-center btn-group\" data-toggle=\"buttons-radio\">\n"
-						+" 			<button type=\"button\" class=\"btn btn-large btn-warning\" id=\"q9BtnYes\"> The above <em>Look Wide</em> items have been considered</button>\n"
+						+" 			<button type=\"button\" class=\"btn btn-large btn-warning\" id=\"q9BtnYes\"> The above <em>Look Wide</em> items </p>have been considered</button>\n"
 						+"		</div>\n"
 						+"	</div></p>\n"
 						+" 	</br>\n"
@@ -484,6 +484,8 @@ function get_ohsScript()
 			{
 				$("#question1").hide();
 				$("#question2").show();
+				$("head meta[name=viewport]").remove();
+				$("head").prepend("<meta name=\"viewport\" content=\"user-scalable=0\" />");
 			}
 		});
 		
@@ -497,6 +499,8 @@ function get_ohsScript()
 			}
 			$("#question2").hide();
 			$("#question3").show();
+			$("head meta[name=viewport]").remove();
+			$("head").prepend("<meta name=\"viewport\" content=\"user-scalable=1\" />");
 		});
 		
 		
@@ -700,6 +704,7 @@ function get_ohsScript()
 			$("#question13").hide();
 			$("#question12").show();
 		});';
+	
 	
 	
 
