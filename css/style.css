@@ -51,7 +51,13 @@ input[type="text"] .loginInput
 	height: 40px;
 }
 
-.checkinBtn
+.checkinBtn 
 {
 	height: 8em;
+	text-align: center;
+}
+
+#checkInTxt
+{
+	margin-top: 50%;
 }
