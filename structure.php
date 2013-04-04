@@ -9,16 +9,19 @@ function get_header()
 			<head>                                                                      
 				<title>Heartbeat Training</title>                                      
 				<meta name=\"viewport\" content=\"width=device-width', initial-scale=1.0\"> 
+				<meta name =\"format-detection\" content =\"telephone=no\"> <!--turn off auto phone number detect-->
 				<!--bootstrap-->                                                      
-				<link href=\"css/bootstrap.min.css\" rel=\"stylesheet\" media=\"screen\">    
-				<link href=\"css/bootstrap-responsive.min.css\" rel=\"stylesheet\" media=\"handheld and max-width:960px\">    
+				<!--<link href=\"css/bootstrap.min.css\" rel=\"stylesheet\" media=\"screen\">    
+				<link href=\"css/bootstrap-responsive.min.css\" rel=\"stylesheet\"> -->
+				<link href=\"css/bootstrap.css\" rel=\"stylesheet\" media=\"screen\">    
+				<link href=\"css/bootstrap-responsive.css\" rel=\"stylesheet\">
 				<link href=\"css/style.css\" rel=\"stylesheet\" media=\"screen\">
 				<link href=\"css/styleRes.css\" rel=\"stylesheet\" media=\"handheld and max-width: 960px\">
 			</head>                                                                    
-		<body> 
-			<script src=\"http://code.jquery.com/jquery-latest.js\"></script>
-			<script src=\"js/bootstrap.js\"></script>
-			<script src=\"js/bootstrap.min.js\"></script>";		
+			<body> 
+				<script src=\"http://code.jquery.com/jquery-latest.js\"></script>
+				<script src=\"js/bootstrap.js\"></script>
+				<script src=\"js/bootstrap.min.js\"></script>";		
 	echo $headerHtml;
 		
 }
@@ -72,6 +75,7 @@ function get_ohsScript()
 						+"			<button type=\"button\" class=\"btn btn-large\" value=\"No\" id=\"q1BtnNo\"> No </button>\n"
 						+"		</div>\n"
 						+"	</div>\n"
+						+" 	</br>\n"
 						+"	<a id=\"btnQ1\" class=\"btn btn-primary pull-right\">Next</a>\n"
 						+"</div>";
 			
@@ -93,6 +97,7 @@ function get_ohsScript()
 						+"			<option>P2</option> //this will be downloaded from db \n"
 						+"		</select>\n" 
 						+"	</div>\n"
+						+" 	</br>\n"
 						+"	<a id=\"btnPrev2\" class=\"btn btn-primary pull-left\">Previous</a>\n"
 						+"	<a id=\"btnQ2\" class=\"btn btn-primary pull-right\">Next</a>\n"
 						+"</div>\n";
@@ -115,6 +120,7 @@ function get_ohsScript()
 						+" 			<button type=\"button\" class=\"btn btn-large\" id=\"q3BtnNA\"> N/A </button>\n"
 						+"		</div>\n"
 						+"	</div>\n"
+						+" 	</br>\n"
 						+"	<a id=\"btnPrev3\" class=\"btn btn-primary pull-left\">Previous</a>\n"
 						+"	<a id=\"btnQ3\" class=\"btn btn-primary pull-right\">Next</a>\n"
 						+"</div>\n";
@@ -132,11 +138,12 @@ function get_ohsScript()
 						+" 	<div class=\"row-fluid\">\n"
 						+"		<input type=\"hidden\" name=\"q4\" id=\"q4\" value=\"-1\"/>\n"
 						+" 		<div class=\"span12 text-center btn-group\" data-toggle=\"buttons-radio\">\n"
-						+" 			<button type=\"button\" class=\"btn btn-large\" id=\"q4BtnYes\"> Yes </button>\n"
+						+" 			<input type=\"button\" class=\"btn btn-large\" id=\"q4BtnYes\" value=\"Yes\"/>\n"
 						+"			<button type=\"button\" class=\"btn btn-large\" id=\"q4BtnNo\"> No </button>\n"
 						+" 			<button type=\"button\" class=\"btn btn-large\" id=\"q4BtnNA\"> N/A </button>\n"
 						+"		</div>\n"
 						+"	</div>\n"
+						+" 	</br>\n"
 						+"	<a id=\"btnPrev4\" class=\"btn btn-primary pull-left\">Previous</a>\n"
 						+"	<a id=\"btnQ4\" class=\"btn btn-primary pull-right\">Next</a>\n"
 						+"</div>\n";
@@ -159,6 +166,7 @@ function get_ohsScript()
 						+" 			<button type=\"button\" class=\"btn btn-large\" id=\"q5BtnNA\"> N/A </button>\n"
 						+"		</div>\n"
 						+"	</div>\n"
+						+" 	</br>\n"
 						+"	<a id=\"btnPrev5\" class=\"btn btn-primary pull-left\">Previous</a>\n"
 						+"	<a id=\"btnQ5\" class=\"btn btn-primary pull-right\">Next</a>\n"
 						+"</div>\n";
@@ -181,6 +189,7 @@ function get_ohsScript()
 						+" 			<button type=\"button\" class=\"btn btn-large\" id=\"q6BtnNA\"> N/A </button>\n"
 						+"		</div>\n"
 						+"	</div>\n"
+						+" 	</br>\n"
 						+"	<a id=\"btnPrev6\" class=\"btn btn-primary pull-left\">Previous</a>\n"
 						+"	<a id=\"btnQ6\" class=\"btn btn-primary pull-right\">Next</a>\n"
 						+"</div>\n";
@@ -206,9 +215,10 @@ function get_ohsScript()
 						+" 	<div class=\"row-fluid\">\n"
 						+"		<input type=\"hidden\" name=\"q7\" id=\"q7\" value=\"-1\"/>\n"
 						+" 		<div class=\"span12 text-center btn-group\" data-toggle=\"buttons-radio\">\n"
-						+" 			<button type=\"button\" class=\"btn btn-large btn-warning\" id=\"q7BtnYes\"> The above <em>Look Close</em> items have been considered</button>\n"
+						+" 			<button type=\"button\" class=\"btn btn-large btn-warning\" id=\"q7BtnYes\"> The above <em>Look Close</em> items </p>have been considered</button>\n"
 						+"		</div>\n"
 						+"	</div></p>\n"
+						+" 	</br>\n"
 						+"	<a id=\"btnPrev7\" class=\"btn btn-primary pull-left\">Previous</a>\n"
 						+"	<a id=\"btnQ7\" class=\"btn btn-primary pull-right\">Next</a>\n"
 						+"</div>\n";
@@ -239,6 +249,7 @@ function get_ohsScript()
 						+" 			<button type=\"button\" class=\"btn btn-large btn-warning btn-block\" id=\"q8BtnYes\"> The above <em>Look-For-The-Hidden</em> items have been considered</button>\n"
 						+"		</div>\n"
 						+"	</div></p>\n"
+						+" 	</br>\n"
 						+"	<a id=\"btnPrev8\" class=\"btn btn-primary pull-left\">Previous</a>\n"
 						+"	<a id=\"btnQ8\" class=\"btn btn-primary pull-right\">Next</a>\n"
 						+"</div>\n";
@@ -267,6 +278,7 @@ function get_ohsScript()
 						+" 			<button type=\"button\" class=\"btn btn-large btn-warning\" id=\"q9BtnYes\"> The above <em>Look Wide</em> items have been considered</button>\n"
 						+"		</div>\n"
 						+"	</div></p>\n"
+						+" 	</br>\n"
 						+"	<a id=\"btnPrev9\" class=\"btn btn-primary pull-left\">Previous</a>\n"
 						+"	<a id=\"btnQ9\" class=\"btn btn-primary pull-right\">Next</a>\n"
 						+"</div>\n";
@@ -285,6 +297,7 @@ function get_ohsScript()
 						+"		<input type=\"hidden\" name=\"q10\" id=\"q10\" value=\"-1\"/>\n"
 						+"		<textarea rows=\"4\" id=\"q10Btn\"></textarea>\n"
 						+" 	</div>\n"
+						+" 	</br>\n" 
 						+"	<a id=\"btnPrev10\" class=\"btn btn-primary pull-left\">Previous</a>\n"
 						+"	<a id=\"btnQ10\" class=\"btn btn-primary pull-right\">Next</a>\n"
 						+"</div>\n";
@@ -307,6 +320,7 @@ function get_ohsScript()
 						+" 			<button type=\"button\" class=\"btn btn-large\" id=\"q11BtnNA\"> N/A </button>\n"
 						+"		</div>\n"
 						+" 	</div>\n"
+						+" 	</br>\n"
 						+"	<a id=\"btnPrev11\" class=\"btn btn-primary pull-left\">Previous</a>\n"
 						+"	<a id=\"btnQ11\" class=\"btn btn-primary pull-right\">Next</a>\n"
 						+"</div>\n";
@@ -329,6 +343,7 @@ function get_ohsScript()
 						+" 			<button type=\"button\" class=\"btn btn-large\" id=\"q12BtnNA\"> N/A </button>\n"
 						+"		</div>\n"
 						+" 	</div>\n"
+						+" 	</br>\n"
 						+"	<a id=\"btnPrev12\" class=\"btn btn-primary pull-left\">Previous</a>\n"
 						+"	<a id=\"btnQ12\" class=\"btn btn-primary pull-right\">Next</a>\n"
 						+"</div>\n";
@@ -342,6 +357,7 @@ function get_ohsScript()
 						+"			<p class=\"text-center\">Save your checklist or return to previous questions?</p>\n"
 						+" 		</div>\n"
 						+" 	</div>\n"
+						+" 	</br>\n"
 						+"	<a id=\"btnPrev13\" class=\"btn btn-primary pull-left\">Previous</a>\n"
 						+"	<a id=\"btnQ13\" class=\"btn btn-success pull-right\">Save</a>\n"
 						+"</div>\n";
@@ -464,8 +480,11 @@ function get_ohsScript()
 				
 			}
 			
-			$("#question1").hide();
-			$("#question2").show();
+			if (q1Value =="No")
+			{
+				$("#question1").hide();
+				$("#question2").show();
+			}
 		});
 		
 		
@@ -822,11 +841,23 @@ function geo(){
 		{
 			var latitude = position.coords.latitude;
 			var longitude = position.coords.longitude;
+			$("#locationP").text("Location Identified:");
 			$("#long").text(longitude);
 			$("#lat").text(latitude);
+			$("#longIn").val(longitude);
+			$("#latIn").val(latitude);
+			
+			$("#checkInBtn").removeClass("disabled");
+		
+			$("#checkInBtn").click(function(){
+				$("#locationForm").submit();
+			});
+			
 		}
 		
 		getLocation();
+		
+		
 	';
 
 	echo $geoCode;
