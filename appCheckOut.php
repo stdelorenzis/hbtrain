@@ -18,6 +18,11 @@
 			$("#btnCheckOut").click(function(){
 				location.href="appIndex.php";
 			});
+			
+			$("#ohsChecklist").click(function(){
+				location.href="appChecklist.php";
+			});
+			
 		});
 	</script>
 	<div class="container-fluid v-background s-container">
@@ -29,13 +34,13 @@
 			<div class="span10 offset1 text-center">
 				<p>FirstName LastName</p>
 				<p id="checkedInP">Checked In At:</p>
-				<span id="long"><?php echo $long?></span></p><span id="lat"><? echo $lat ?></span> <!--will be taken from db in future, not geolocations-->
+				<span id="lat"><? echo $lat ?></span></p><span id="long"><?php echo $long?></span> <!--will be taken from db in future, not geolocations-->
 			</div>
 		</div>
 		</br>
 		<div class="row-fluid">
 			<div class="span10 offset1 text-center">
-				<button id="ohsModal" type="submit" class="btn btn-primary btn-large btn-block">Complete Daily Checklist</button>
+				<button id="ohsChecklist" type="submit" class="btn btn-primary btn-large btn-block">Complete Daily Checklist</button>
 			</div>
 		</div>
 		</br>
@@ -54,23 +59,7 @@
 		</div>
 	</div>
 	
-	<!--modal popup box-->
-	 <div id="ohsChecklist" class="modal hide fade">
-		<div class="modal-header">
-			<button type="button" class="close ohsModalClose" aria-hidden="true">x</button>
-			<h3 id="myModalLabel">OHS Checklist</h3>
-			</div>
-		<div class="modal-body">
-			<form id="ohsChecklistForm" action="ohsChecklist_updb.php" method="post">
-				<div id="question">
-					<!--OHS questions-->
-				</div>
-			</form>
-		</div>
-		<div class="modal-footer">
-			<button class="btn btn-danger ohsModalClose" aria-hidden="true">Close</button>
-		</div>
-	</div>
+
 <?php
 	get_app_footer();
 

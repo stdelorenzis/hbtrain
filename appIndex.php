@@ -33,7 +33,7 @@ $(document).ready(function(){
 			<div class="span12 text-center" >
 				<form id="locationForm" method="post" action="appCheckOut.php">
 					<p id="locationP"></p>
-					<span id="long"></span>&nbsp<span id="lat"></span>
+					<span id="lat"></span>&nbsp<span id="long"></span>
 					<input type="hidden" name="longIn" id="longIn"/><input type="hidden" name="latIn" id="latIn"/>
 				</form>
 			</div>
