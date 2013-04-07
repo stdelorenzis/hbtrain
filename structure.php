@@ -58,11 +58,13 @@ function get_ohsScript()
 				
 		});
 		
+		//stop screen from zooming for inputs
 		function disableZoom(){
 			$("head meta[name=viewport]").remove();
 			$("head").prepend("<meta name=\"viewport\" content=\"user-scalable=0\" />");
 		}
 		
+		//return zoom
 		function addZoom(){
 			$("head meta[name=viewport]").remove();
 			$("head").prepend("<meta name=\"viewport\" content=\"user-scalable=1\" />");
@@ -254,9 +256,11 @@ function get_ohsScript()
 						+" 		</div>\n"
 						+" 	</div>\n"
 						+" 	<div class=\"row-fluid\">\n"
-						+"		<input type=\"hidden\" name=\"q8\" id=\"q8\" value=\"-1\"/>\n"
-						+" 		<div class=\"span12 text-center btn-group\" data-toggle=\"buttons-radio\">\n"
-						+" 			<button type=\"button\" class=\"btn btn-large btn-warning\" id=\"q8BtnYes\"> The above <em>Look-For-The-Hidden</em> items </p> have been considered</button>\n"
+						+" 		<div class=\"span10 offset1\">\n"
+						+"			<input type=\"hidden\" name=\"q8\" id=\"q8\" value=\"-1\"/>\n"
+						+" 			<div class=\"span12 text-center btn-group\" data-toggle=\"buttons-radio\">\n"
+						+" 				<button type=\"button\" class=\"btn btn-large btn-warning\" id=\"q8BtnYes\"> The above </p><em>Look For The Hidden</em> </p>items have been considered</button>\n"
+						+"			</div>\n"
 						+"		</div>\n"
 						+"	</div></p>\n"
 						+" 	</br>\n"
@@ -501,7 +505,6 @@ function get_ohsScript()
 		
 		
 		$("#btnQ2").click(function(){
-			addZoom();
 			var q2Value = $("#q2").val();
 			if (q2Value == "Select")
 			{
@@ -510,6 +513,7 @@ function get_ohsScript()
 			}
 			$("#question2").hide();
 			$("#question3").show();
+			addZoom();
 			
 		});
 		
@@ -593,6 +597,7 @@ function get_ohsScript()
 				}
 			$("#question9").hide();
 			$("#question10").show();
+			disableZoom();
 		});
 		
 		$("#btnQ10").click(function(){
@@ -601,6 +606,7 @@ function get_ohsScript()
 						
 			$("#question10").hide();
 			$("#question11").show();
+			addZoom();
 		});
 		
 		$("#btnQ11").click(function(){
@@ -696,12 +702,14 @@ function get_ohsScript()
 			
 			$("#question10").hide();
 			$("#question9").show();
+			addZoom();
 		});
 		
 		$("#btnPrev11").click(function(){
 			
 			$("#question11").hide();
 			$("#question10").show();
+			disableZoom();
 		});
 		
 		$("#btnPrev12").click(function(){
