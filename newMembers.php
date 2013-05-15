@@ -89,6 +89,13 @@
 						<div class="controls">
 							<input class="input-xlarge" type="text" name="lname" id="inputLname" placeholder="Last Name">
 							<span id="alertLname"></span>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="password">Password</label>
+						<div class="controls">
+							<input class="input-xlarge" type="text" name="password" id="inputPassword" placeholder="Password">
+							<span id="alertPassword"></span>
 							</p>
 							</p>
 							<button id="newMember" type="submit" class="btn btn-success">Sign Up</button>

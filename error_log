@@ -1,0 +1,6 @@
+[06-May-2013 14:08:50] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/optergyc/public_html/heartbeat/mobile/checkedin.php on line 27
+[06-May-2013 14:08:50] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/optergyc/public_html/heartbeat/mobile/checkedin.php on line 31
+[06-May-2013 14:09:29] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/optergyc/public_html/heartbeat/mobile/checkedin.php on line 27
+[06-May-2013 14:09:29] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/optergyc/public_html/heartbeat/mobile/checkedin.php on line 31
+[06-May-2013 14:09:38] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/optergyc/public_html/heartbeat/mobile/checkedin.php on line 27
+[06-May-2013 14:09:38] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/optergyc/public_html/heartbeat/mobile/checkedin.php on line 31
